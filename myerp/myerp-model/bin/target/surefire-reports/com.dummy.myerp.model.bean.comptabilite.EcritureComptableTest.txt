@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: com.dummy.myerp.model.bean.comptabilite.EcritureComptableTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.124 s <<< FAILURE! - in com.dummy.myerp.model.bean.comptabilite.EcritureComptableTest
+isEquilibree(com.dummy.myerp.model.bean.comptabilite.EcritureComptableTest)  Time elapsed: 0.034 s  <<< FAILURE!
+java.lang.AssertionError: 
+EcritureComptable{id=null, journal=null, reference='null', date=null, libelle='Non équilibrée', totalDebit=31, totalCredit=31, listLigneEcriture=[
+LigneEcritureComptable{compteComptable=CompteComptable{numero=1, libelle='null'}, libelle='10', debit=10, credit=null}
+LigneEcritureComptable{compteComptable=CompteComptable{numero=1, libelle='null'}, libelle='19', debit=20, credit=1}
+LigneEcritureComptable{compteComptable=CompteComptable{numero=2, libelle='null'}, libelle='-30', debit=null, credit=30}
+LigneEcritureComptable{compteComptable=CompteComptable{numero=2, libelle='null'}, libelle='-1', debit=1, credit=2}
+]}
+	at com.dummy.myerp.model.bean.comptabilite.EcritureComptableTest.isEquilibree(EcritureComptableTest.java:41)
+
