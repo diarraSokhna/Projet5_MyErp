@@ -16,13 +16,17 @@ public class ComptabiliteManagerImplTest {
 
 	private ComptabiliteManagerImpl manager = new ComptabiliteManagerImpl();
 
-	@Test
+	@Test(expected = FunctionalException.class)
 	public void checkEcritureComptableUnit() throws Exception {
 		EcritureComptable vEcritureComptable;
 		vEcritureComptable = new EcritureComptable();
+		Date vCurrentDate = new Date(); 
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
+		String vCurrentYear = sdf.format(vCurrentDate);
 		vEcritureComptable.setJournal(new JournalComptable("AC", "Achat"));
-		vEcritureComptable.setDate(new Date());
+		vEcritureComptable.setDate(vCurrentDate);
 		vEcritureComptable.setLibelle("Libelle");
+		vEcritureComptable.setReference("VE-" + vCurrentYear + "/00004");
 		vEcritureComptable.getListLigneEcriture()
 				.add(new LigneEcritureComptable(new CompteComptable(1), null, new BigDecimal(123), null));
 		vEcritureComptable.getListLigneEcriture()
@@ -84,5 +88,27 @@ public class ComptabiliteManagerImplTest {
 		manager.addReference(vEcritureComptable);
 
 	}
+	
+
+    @Test(expected = FunctionalException.class)
+ public void checkEcritureComptable() throws Exception {
+    	EcritureComptable vEcritureComptable;
+		vEcritureComptable = new EcritureComptable();
+		Date vCurrentDate = new Date(); 
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
+		String vCurrentYear = sdf.format(vCurrentDate);
+//		System.out.println(" year "+vCurrentYear);
+        vEcritureComptable.setJournal(new JournalComptable("VE", "Vente"));
+        vEcritureComptable.setDate(vCurrentDate);
+        vEcritureComptable.setLibelle("Libelle");
+        vEcritureComptable.setReference("VE-" + vCurrentYear + "/00004");
+        vEcritureComptable.getListLigneEcriture().add(new LigneEcritureComptable(new CompteComptable(1),
+                null, new BigDecimal(123),
+                null));
+        vEcritureComptable.getListLigneEcriture().add(new LigneEcritureComptable(new CompteComptable(2),
+                null, null,
+                new BigDecimal(123)));
+        manager.checkEcritureComptable(vEcritureComptable);
+    }
 
 }

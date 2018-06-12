@@ -88,7 +88,7 @@ public class ComptabiliteManagerImpl extends AbstractBusinessManager implements 
 //		System.out.println("sequence :" + vSequenceEcritureCompta);
 		 //rechercher la séquence par rapport à l'année
 		SequenceEcritureComptable vExistingSequence = new SequenceEcritureComptable();
-		
+//		System.out.println("proxy :" + getDaoProxy());
 		vExistingSequence = getDaoProxy().getComptabiliteDao().getSequenceByAnneeCourante(anneeEcritureCompta);
  
 		//si aucune séquence trouvée num = 1 sinon num = derniere + 1  

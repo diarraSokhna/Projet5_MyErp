@@ -1,5 +1,7 @@
 package com.dummy.myerp.model.bean.comptabilite;
 
+import static org.junit.Assert.*;
+
 import java.math.BigDecimal;
 
 import org.apache.commons.lang3.ObjectUtils;
@@ -40,5 +42,36 @@ public class EcritureComptableTest {
         vEcriture.getListLigneEcriture().add(this.createLigne(2, "1", "2"));
         Assert.assertFalse(vEcriture.toString(), vEcriture.isEquilibree());
     }
+    
+    @Test
+  public void getTotalDebit() {
+    	EcritureComptable vEcriture;
+        vEcriture = new EcritureComptable();
+        vEcriture.getListLigneEcriture().add(this.createLigne(1, "200.50", null));
+        vEcriture.getListLigneEcriture().add(this.createLigne(1, "100.50", "33"));
+        vEcriture.getListLigneEcriture().add(this.createLigne(2, null, "301"));
+        vEcriture.getListLigneEcriture().add(this.createLigne(2, "40", "7"));
+        assertEquals(341, vEcriture.getTotalDebit().intValue());
+    }
+    
+    @Test
+  public void getTotalCredit() {
+    	EcritureComptable vEcriture;
+        vEcriture = new EcritureComptable();
+        vEcriture.getListLigneEcriture().add(this.createLigne(1, "10", null));
+        vEcriture.getListLigneEcriture().add(this.createLigne(1, "20", "1"));
+        vEcriture.getListLigneEcriture().add(this.createLigne(2, null, "30"));
+        vEcriture.getListLigneEcriture().add(this.createLigne(2, "1", "2"));
+        assertEquals(33, vEcriture.getTotalCredit().intValue());
+    }
+    
+    @Test
+   public void getReference() {
+    	EcritureComptable vEcriture;
+        vEcriture = new EcritureComptable();
+        vEcriture.setReference("BQ-2018/00005");
+        Assert.assertTrue("La ref ne respecte pas le format \"XX-AAAA/#####\"", vEcriture.getReference().matches("[A-Z]{1,5}-\\d{4}/\\d{5}"));
+    }
+
 
 }
