@@ -85,12 +85,14 @@ public class ComptabiliteManagerImpl extends AbstractBusinessManager implements 
 		SequenceEcritureComptable vSequenceEcritureCompta = new SequenceEcritureComptable();
 		//la séquence d'écriture à l'année d'écriture
 		vSequenceEcritureCompta.setAnnee(anneeEcritureCompta);
-//		System.out.println("sequence :" + vSequenceEcritureCompta);
+		System.out.println("sequence :" + vSequenceEcritureCompta);
 		 //rechercher la séquence par rapport à l'année
 		SequenceEcritureComptable vExistingSequence = new SequenceEcritureComptable();
-//		System.out.println("proxy :" + getDaoProxy());
+		System.out.println("proxy :" + getDaoProxy());
+		
 		vExistingSequence = getDaoProxy().getComptabiliteDao().getSequenceByAnneeCourante(anneeEcritureCompta);
- 
+	
+		
 		//si aucune séquence trouvée num = 1 sinon num = derniere + 1  
 		   int numSequence;
 	        if (vExistingSequence == null) {

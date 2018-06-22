@@ -4,7 +4,10 @@ import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.junit.Assert;
 import org.junit.Test;
+
+import com.dummy.myerp.business.contrat.manager.ComptabiliteManager;
 import com.dummy.myerp.model.bean.comptabilite.CompteComptable;
 import com.dummy.myerp.model.bean.comptabilite.EcritureComptable;
 import com.dummy.myerp.model.bean.comptabilite.JournalComptable;
@@ -15,12 +18,13 @@ import com.dummy.myerp.technical.exception.NotFoundException;
 public class ComptabiliteManagerImplTest {
 
 	private ComptabiliteManagerImpl manager = new ComptabiliteManagerImpl();
+	private  ComptabiliteManager managerIntegration ;
 
 	@Test(expected = FunctionalException.class)
 	public void checkEcritureComptableUnit() throws Exception {
 		EcritureComptable vEcritureComptable;
 		vEcritureComptable = new EcritureComptable();
-		Date vCurrentDate = new Date(); 
+		Date vCurrentDate = new Date();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
 		String vCurrentYear = sdf.format(vCurrentDate);
 		vEcritureComptable.setJournal(new JournalComptable("AC", "Achat"));
@@ -78,37 +82,34 @@ public class ComptabiliteManagerImplTest {
 		vEcritureComptable.setDate(new SimpleDateFormat("yyyy/MM/dd").parse("2016/05/31"));
 		vEcritureComptable.setLibelle("Fourniture bureau");
 
-		vEcritureComptable.getListLigneEcriture()
-		         .add(new LigneEcritureComptable(new CompteComptable(606),"Fourniture bureau", new BigDecimal(43), null));
+		vEcritureComptable.getListLigneEcriture().add(
+				new LigneEcritureComptable(new CompteComptable(606), "Fourniture bureau", new BigDecimal(43), null));
 		vEcritureComptable.getListLigneEcriture()
 				.add(new LigneEcritureComptable(new CompteComptable(4456), "TVA 20%", new BigDecimal(8), null));
 		vEcritureComptable.getListLigneEcriture()
 				.add(new LigneEcritureComptable(new CompteComptable(401), "Facture F110001", null, new BigDecimal(51)));
 
 		manager.addReference(vEcritureComptable);
-
+		
 	}
-	
 
-    @Test(expected = FunctionalException.class)
- public void checkEcritureComptable() throws Exception {
-    	EcritureComptable vEcritureComptable;
+	@Test(expected = FunctionalException.class)
+	public void checkEcritureComptable() throws Exception {
+		EcritureComptable vEcritureComptable;
 		vEcritureComptable = new EcritureComptable();
-		Date vCurrentDate = new Date(); 
+		Date vCurrentDate = new Date();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
 		String vCurrentYear = sdf.format(vCurrentDate);
-//		System.out.println(" year "+vCurrentYear);
-        vEcritureComptable.setJournal(new JournalComptable("VE", "Vente"));
-        vEcritureComptable.setDate(vCurrentDate);
-        vEcritureComptable.setLibelle("Libelle");
-        vEcritureComptable.setReference("VE-" + vCurrentYear + "/00004");
-        vEcritureComptable.getListLigneEcriture().add(new LigneEcritureComptable(new CompteComptable(1),
-                null, new BigDecimal(123),
-                null));
-        vEcritureComptable.getListLigneEcriture().add(new LigneEcritureComptable(new CompteComptable(2),
-                null, null,
-                new BigDecimal(123)));
-        manager.checkEcritureComptable(vEcritureComptable);
-    }
+		// System.out.println(" year "+vCurrentYear);
+		vEcritureComptable.setJournal(new JournalComptable("VE", "Vente"));
+		vEcritureComptable.setDate(vCurrentDate);
+		vEcritureComptable.setLibelle("Libelle");
+		vEcritureComptable.setReference("VE-" + vCurrentYear + "/00004");
+		vEcritureComptable.getListLigneEcriture()
+				.add(new LigneEcritureComptable(new CompteComptable(1), null, new BigDecimal(123), null));
+		vEcritureComptable.getListLigneEcriture()
+				.add(new LigneEcritureComptable(new CompteComptable(2), null, null, new BigDecimal(123)));
+		manager.checkEcritureComptable(vEcritureComptable);
+	}
 
 }
