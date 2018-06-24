@@ -1,7 +1,7 @@
 version: '2'
 services:
   myerp.db:
-    image: postgres:9.4
+    image: postgres:10.4
     ports:
       - "5432:5432"
     #  - "127.0.0.1:9032:5432"

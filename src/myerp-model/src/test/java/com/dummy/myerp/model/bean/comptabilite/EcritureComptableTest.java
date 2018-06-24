@@ -11,6 +11,8 @@ import org.junit.Test;
 
 public class EcritureComptableTest {
 
+	EcritureComptable vEcriture = new EcritureComptable();
+	 
     private LigneEcritureComptable createLigne(Integer pCompteComptableNumero, String pDebit, String pCredit) {
         BigDecimal vDebit = pDebit == null ? null : new BigDecimal(pDebit);
         BigDecimal vCredit = pCredit == null ? null : new BigDecimal(pCredit);
@@ -24,9 +26,6 @@ public class EcritureComptableTest {
 
     @Test
     public void isEquilibree() {
-        EcritureComptable vEcriture;
-        vEcriture = new EcritureComptable();
-
         vEcriture.setLibelle("Equilibrée");
         vEcriture.getListLigneEcriture().add(this.createLigne(1, "200.50", null));
         vEcriture.getListLigneEcriture().add(this.createLigne(1, "100.50", "33"));
@@ -45,8 +44,6 @@ public class EcritureComptableTest {
     
     @Test
   public void getTotalDebit() {
-    	EcritureComptable vEcriture;
-        vEcriture = new EcritureComptable();
         vEcriture.getListLigneEcriture().add(this.createLigne(1, "200.50", null));
         vEcriture.getListLigneEcriture().add(this.createLigne(1, "100.50", "33"));
         vEcriture.getListLigneEcriture().add(this.createLigne(2, null, "301"));
@@ -56,8 +53,6 @@ public class EcritureComptableTest {
     
     @Test
   public void getTotalCredit() {
-    	EcritureComptable vEcriture;
-        vEcriture = new EcritureComptable();
         vEcriture.getListLigneEcriture().add(this.createLigne(1, "10", null));
         vEcriture.getListLigneEcriture().add(this.createLigne(1, "20", "1"));
         vEcriture.getListLigneEcriture().add(this.createLigne(2, null, "30"));
@@ -67,8 +62,6 @@ public class EcritureComptableTest {
     
     @Test
    public void getReference() {
-    	EcritureComptable vEcriture;
-        vEcriture = new EcritureComptable();
         vEcriture.setReference("BQ-2018/00005");
         Assert.assertTrue("La ref ne respecte pas le format \"XX-AAAA/#####\"", vEcriture.getReference().matches("[A-Z]{1,5}-\\d{4}/\\d{5}"));
     }

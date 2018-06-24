@@ -84,13 +84,14 @@ public class ComptabiliteManagerImpl extends AbstractBusinessManager implements 
 //		System.out.println("anneecompta :" + anneeEcritureCompta);
 		SequenceEcritureComptable vSequenceEcritureCompta = new SequenceEcritureComptable();
 		//la séquence d'écriture à l'année d'écriture
+		vSequenceEcritureCompta.setJournalCode(pEcritureComptable.getJournal().getCode());
 		vSequenceEcritureCompta.setAnnee(anneeEcritureCompta);
 		System.out.println("sequence :" + vSequenceEcritureCompta);
 		 //rechercher la séquence par rapport à l'année
 		SequenceEcritureComptable vExistingSequence = new SequenceEcritureComptable();
 		System.out.println("proxy :" + getDaoProxy());
 		
-		vExistingSequence = getDaoProxy().getComptabiliteDao().getSequenceByAnneeCourante(anneeEcritureCompta);
+		vExistingSequence = getDaoProxy().getComptabiliteDao().getSequenceByCodeAndAnneeCourante(vSequenceEcritureCompta);
 	
 		
 		//si aucune séquence trouvée num = 1 sinon num = derniere + 1  
@@ -113,6 +114,7 @@ public class ComptabiliteManagerImpl extends AbstractBusinessManager implements 
 	        
 	        //Enregistrer (insert/update) la valeur de la séquence en persitance
 	        SequenceEcritureComptable sequence = new SequenceEcritureComptable();
+	        sequence.setJournalCode(pEcritureComptable.getJournal().getCode());
 	        sequence.setAnnee(anneeEcritureCompta);
 	        sequence.setDerniereValeur(numSequence);
 	        this.insertOrUpdateSequenceEcritureComptable(sequence);
@@ -186,6 +188,7 @@ public class ComptabiliteManagerImpl extends AbstractBusinessManager implements 
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
 		String anneeReference = sdf.format(pEcritureComptable.getDate());
 		String reference = pEcritureComptable.getReference();
+		System.out.println("ref " + reference +" - ecri "+pEcritureComptable);
 		String sousChaine = reference.substring(3, 7);
 		String codeJournal = reference.substring(0, 2);
 

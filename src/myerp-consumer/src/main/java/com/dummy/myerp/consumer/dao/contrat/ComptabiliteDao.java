@@ -87,7 +87,7 @@ public interface ComptabiliteDao {
      *
      * @param pSequence la séquence recherchée
      */
-    SequenceEcritureComptable getSequenceByAnneeCourante(Integer annee) throws NotFoundException;
+    SequenceEcritureComptable getSequenceByCodeAndAnneeCourante(SequenceEcritureComptable pSequence) throws NotFoundException;
     
     /**
     * Insert ou Update une  séquence écriture compta.
