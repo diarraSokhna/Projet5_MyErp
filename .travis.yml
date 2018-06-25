@@ -1,3 +1,2 @@
 language: java
-sudo: false
-script: mvn clean verify
+script: mvn --batch-mode --file ./src/pom.xml clean test -P test-consumer,test-business
