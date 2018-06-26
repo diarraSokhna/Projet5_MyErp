@@ -1,6 +1,6 @@
 # MyERP
 
-[![Build Status](https://travis-ci.org/joaomlneto/travis-ci-tutorial-java.svg?branch=master)](https://travis-ci.org/joaomlneto/travis-ci-tutorial-java)
+[![Build Status](https://travis-ci.org/diarraSokhna/Projet5_MyErp/?branch=master)](https://travis-ci.org/diarraSokhna/Projet5_MyErp/)
 [![Code Coverage](https://codecov.io/github/joaomlneto/travis-ci-tutorial-java/coverage.svg)](https://codecov.io/gh/joaomlneto/travis-ci-tutorial-java)
 
 ## Organisation du répertoire
