@@ -1,4 +1,9 @@
 language: java
-script: mvn --file ./src/pom.xml clean test -P test-consumer,test-business,test-modele
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
+# use Java 8
+jdk:
+- oraclejdk8
+cache:
+  directories:
+  - $HOME/.m2
+script: mvn --file ./src/pom.xml clean test -P test-consumer,test-business
+
