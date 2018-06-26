@@ -1,0 +1,9 @@
+language: java
+# use Java 8
+jdk:
+- oraclejdk8
+cache:
+  directories:
+  - $HOME/.m2
+script: mvn --file ./src/pom.xml clean test -P test-consumer,test-business
+

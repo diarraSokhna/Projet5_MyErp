@@ -1,5 +1,8 @@
 # MyERP
 
+[![Build Status](https://travis-ci.org/diarraSokhna/Projet5_MyErp.svg?branch=master)](https://travis-ci.org/diarraSokhna/Projet5_MyErp/)
+
+
 ## Organisation du répertoire
 
 *   `doc` : documentation
