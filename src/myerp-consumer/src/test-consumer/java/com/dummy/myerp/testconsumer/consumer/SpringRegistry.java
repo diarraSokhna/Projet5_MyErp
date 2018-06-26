@@ -80,6 +80,6 @@ public final class SpringRegistry {
      * @return {@link DaoProxy}
      */
     public static DaoProxy getDaoProxy() {
-        return (DaoProxy) SpringRegistry.getBean("daoProxy");
+        return (DaoProxy) SpringRegistry.getBean("DaoProxy");
     }
 }
