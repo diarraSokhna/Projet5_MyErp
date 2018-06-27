@@ -10,7 +10,7 @@ jdk:
   #database: db_myerp
   #username: usr_myerp
   #password: myerp
-before_script:
-  - "psql -c 'create database db_myerp;' -U usr_myerp"
+#before_script:
+ # - "psql -c 'create database db_myerp;' -U usr_myerp"
 script: mvn --file ./src/pom.xml clean test -P test-consumer,test-business
 
