@@ -11,6 +11,6 @@ cache:
   install:
   - docker run -d --name postgres -e "POSTGRES_USER=usr_myerp" -e "POSTGRES_PASSWORD=myerp" -e "POSTGRES_DB=db_myerp" postgres:10.4
  before_script:
-  -docker-compose -f ./src/docker/dev/docker-compose.yml build
+  -docker  --file ./src/docker/dev/docker-compose.yml build
 script: mvn --file ./src/pom.xml clean test -P test-consumer,test-business
 
