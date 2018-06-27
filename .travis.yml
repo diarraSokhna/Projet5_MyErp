@@ -1,8 +1,8 @@
 language: java
 # use Java 8
 jdk:
-- oraclejdk
-  sudo: required
+  - oraclejdk
+ sudo: required
  postgres:
   adapter: postgresql
   database: db_myerp
