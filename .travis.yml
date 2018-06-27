@@ -3,8 +3,10 @@ language: java
 jdk:
   - oraclejdk
  #sudo: required
- #services:
- # - postgresql
+services:
+  - postgresql
+#services:
+#  - postgresql
  #postgres:
   #adapter: postgresql
   #database: db_myerp
