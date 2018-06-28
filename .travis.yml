@@ -7,7 +7,7 @@ services:
   - docker
 install:
  # cd src/docker/
-  - docker-compose -f docker/dev/docker-compose.yml up --detach 
+  - docker-compose -f docker/dev/docker-compose.yml up --buil --detach 
 #script:
 #  - docker-compose build
 script:
