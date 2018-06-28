@@ -6,5 +6,6 @@ sudo: required
 services:
   - docker
 before_script:
-  - docker-compose -f src/docker/dev/docker-compose.yml up --build
+ # cd src/docker/
+  - docker-compose -file src/docker/dev/docker-compose.yml up --build
 script: mvn --file ./src/pom.xml clean test -P test-consumer,test-business
