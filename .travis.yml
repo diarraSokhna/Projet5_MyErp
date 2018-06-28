@@ -5,11 +5,10 @@ language: java
 sudo: required
 services:
   - docker
-script:
+before_script:
  # cd src/docker/
   - docker-compose -f docker/dev/docker-compose.yml up --build
-  - mvn --file ./src/pom.xml clean test -P test-consumer,test-business
 #script:
 #  - docker-compose build
-#script:
- # - mvn --file ./src/pom.xml clean test -P test-consumer,test-business
+script:
+   - mvn --file ./src/pom.xml clean test -P test-consumer,test-business
