@@ -7,5 +7,5 @@ services:
   - docker
 before_script:
  # cd src/docker/
-  - docker-compose -file ./src/docker/dev/docker-compose.yml up --build
+  - docker-compose -file docker/dev/docker-compose.yml up --build
 script: mvn --file ./src/pom.xml clean test -P test-consumer,test-business
