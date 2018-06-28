@@ -5,6 +5,7 @@ language: java
  #sudo: required
 services:
   - postgresql
+  - docker
 #services:
 #  - postgresql
 test:
