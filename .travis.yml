@@ -7,7 +7,7 @@ services:
   - docker
 before_script:
  # cd src/docker/
-  - docker-compose -f docker/dev/docker-compose.yml up -d
+  - docker-compose -f docker/dev/docker-compose.yml up --build
 #script:
 #  - docker-compose build
 script:
