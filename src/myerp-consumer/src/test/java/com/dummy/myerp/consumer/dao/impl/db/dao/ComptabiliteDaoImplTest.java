@@ -3,6 +3,7 @@ package com.dummy.myerp.consumer.dao.impl.db.dao;
 import com.dummy.myerp.model.bean.comptabilite.*;
 import com.dummy.myerp.technical.exception.NotFoundException;
 import com.dummy.myerp.testconsumer.consumer.ConsumerTestCase;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -15,7 +16,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class ComptabiliteDaoImplTest extends ConsumerTestCase {
+public class ComptabiliteDaoImplTest  extends ConsumerTestCase{
 
     private static ComptabiliteDaoImpl dao = new ComptabiliteDaoImpl();;
     private static EcritureComptable vEcritureComptable = new EcritureComptable();
@@ -46,7 +47,7 @@ public class ComptabiliteDaoImplTest extends ConsumerTestCase {
     @Test
     public void getListEcritureComptable() {
         List<EcritureComptable> vList = dao.getListEcritureComptable();
-        assertEquals(11, vList.size());
+        assertEquals(6, vList.size());
     }
 
     @Test
