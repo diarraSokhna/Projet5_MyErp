@@ -12,6 +12,6 @@ test:
   database: db_myerp
   username: postgres
  # password: myerp
-before_script:
-  - "psql -c 'create database db_myerp;' -U postgres"
+#before_script:
+ # - "psql -c 'create database db_myerp;' -U postgres"
 script: mvn --file ./src/pom.xml clean test -P test-consumer,test-business
