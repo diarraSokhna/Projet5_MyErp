@@ -5,7 +5,7 @@ language: java
 sudo: required
 services:
   - docker
-install:
+before_script:
  # cd src/docker/
   - docker-compose -f docker/dev/docker-compose.yml up --build
 #script:
