@@ -29,7 +29,7 @@ public class ComptabiliteDaoImplTest  extends ConsumerTestCase{
     @Test
     public void getListCompteComptable() {
         List<CompteComptable> vList = dao.getListCompteComptable();
-        assertEquals(7, vList.size());
+        assertEquals(8, vList.size());
     }
 
 
