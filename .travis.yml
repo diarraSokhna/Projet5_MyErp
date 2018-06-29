@@ -1,14 +1,17 @@
 language: java
 # use Java 8
-#jdk:
-#  - oraclejdk
-sudo: required
+jdk:
+  - oraclejdk8
+ #sudo: required
 services:
-  - docker
+  - postgresql
+#services:
+#  - postgresql
+test:
+  adapter: postgresql
+  database: db_myerp
+  username: postgres
+ # password: myerp
 before_script:
- # cd src/docker/
-  - docker-compose -f docker/dev/docker-compose.yml up --build
-#script:
-#  - docker-compose build
-script:
-   - mvn --file ./src/pom.xml clean package -P test-consumer,test-business
+  - "psql -c 'create database db_myerp;' -U postgres"
+script: mvn --file ./src/pom.xml clean test -P test-consumer,test-business
