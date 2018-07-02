@@ -3,15 +3,15 @@ language: java
 jdk:
   - oraclejdk8
  #sudo: required
-services:
-  - postgresql
+#services:
+ # - postgresql
 #services:
 #  - postgresql
-test:
-  adapter: postgresql
-  database: db_myerp
-  username: postgres
+#test:
+#  adapter: postgresql
+#  database: db_myerp
+#  username: postgres
  # password: myerp
 #before_script:
  # - "psql -c 'create database db_myerp;' -U postgres"
-script: mvn --file ./src/pom.xml clean test -P test-consumer,test-business
+script: mvn --file ./src/pom.xml clean package -P test-consumer,test-business
