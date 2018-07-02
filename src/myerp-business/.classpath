@@ -35,5 +35,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/Secrétaire BIB/Downloads/postgresql-9.1-901.jdbc4.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
