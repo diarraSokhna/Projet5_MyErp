@@ -13,7 +13,7 @@ services:
 #  username: postgres
  # password: myerp
 before_install:
-  - docker-compose -f docker/dev/docker-compose.yml up -d
+  - docker-compose -f docker/dev/docker-compose.yml up
 script: mvn --file ./src/pom.xml clean package -P test-consumer,test-business
 notifications:
   email: false
