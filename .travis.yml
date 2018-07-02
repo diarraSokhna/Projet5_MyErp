@@ -2,9 +2,9 @@ language: java
 # use Java 8
 jdk:
   - oraclejdk8
- #sudo: required
-#services:
- # - postgresql
+sudo: required
+services:
+  - docker
 #services:
 #  - postgresql
 #test:
@@ -12,6 +12,8 @@ jdk:
 #  database: db_myerp
 #  username: postgres
  # password: myerp
-#before_script:
- # - "psql -c 'create database db_myerp;' -U postgres"
+before_install:
+  - docker-compose -f docker/dev/docker-compose.yml up -d
 script: mvn --file ./src/pom.xml clean package -P test-consumer,test-business
+notifications:
+  email: false
