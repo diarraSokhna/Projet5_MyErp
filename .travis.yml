@@ -5,6 +5,8 @@ jdk:
 sudo: required
 services:
   - docker
+addons:
+  postgresql: "10.4"
 #services:
 #  - postgresql
 #test:
