@@ -16,6 +16,6 @@ addons:
  # password: myerp
 before_install:
   - docker-compose -f docker/dev/docker-compose.yml up -d
-script: mvn --file ./src/pom.xml clean package -P test-consumer,test-business
+script: mvn --file ./src/pom.xml clean package -P test-business,test-consumer
 notifications:
   email: false
