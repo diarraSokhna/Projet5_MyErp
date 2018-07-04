@@ -5,6 +5,8 @@ jdk:
 sudo: required
 services:
   - docker
+#addons:
+#  postgresql: "10.4"
 #services:
 #  - postgresql
 #test:
@@ -12,8 +14,10 @@ services:
 #  database: db_myerp
 #  username: postgres
  # password: myerp
-before_install:
+before_script:
   - docker-compose -f docker/dev/docker-compose.yml up -d
-script: mvn --file ./src/pom.xml clean package -P test-consumer,test-business
+script: 
+  - mvn --file ./src/pom.xml clean package -P test-consumer,test-business
+  - docker-compose -f docker/dev/docker-compose.yml ps
 notifications:
   email: false
