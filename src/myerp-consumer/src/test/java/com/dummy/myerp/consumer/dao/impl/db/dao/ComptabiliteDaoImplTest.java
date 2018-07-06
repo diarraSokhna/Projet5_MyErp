@@ -38,17 +38,17 @@ public class ComptabiliteDaoImplTest  extends ConsumerTestCase{
     @Test
     public void getListJournalComptable() {
         List<JournalComptable> vList = dao.getListJournalComptable();
-        assertEquals(3, vList.size());
+        assertEquals(4, vList.size());
     }
 
 
     // ==================== EcritureComptable - GET ====================
 
- /**   @Test
+   @Test
     public void getListEcritureComptable() {
         List<EcritureComptable> vList = dao.getListEcritureComptable();
-        assertEquals(6, vList.size());
-    }**/
+        assertEquals(5, vList.size());
+    }
 
     @Test
     public void getEcritureComptable() throws NotFoundException {
