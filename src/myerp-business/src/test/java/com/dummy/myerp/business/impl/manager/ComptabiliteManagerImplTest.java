@@ -129,5 +129,9 @@ public class ComptabiliteManagerImplTest extends BusinessTestCase{
 				.add(new LigneEcritureComptable(new CompteComptable(2), null, null, new BigDecimal(123)));
 		manager.checkEcritureComptable(vEcritureComptable);
 	}
+	@Test(expected = FunctionalException.class)
+   public void checkEcritureComptableUnitViolation() {
+       manager.checkEcritureComptableUnit(vEcritureComptable));
+    }
 
 }
