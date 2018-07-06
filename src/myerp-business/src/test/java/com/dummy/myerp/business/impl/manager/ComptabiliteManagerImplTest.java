@@ -129,9 +129,24 @@ public class ComptabiliteManagerImplTest extends BusinessTestCase{
 				.add(new LigneEcritureComptable(new CompteComptable(2), null, null, new BigDecimal(123)));
 		manager.checkEcritureComptable(vEcritureComptable);
 	}
+	
 	@Test(expected = FunctionalException.class)
-   public void checkEcritureComptableUnitViolation() {
-       manager.checkEcritureComptableUnit(vEcritureComptable));
+    public void checkEcritureComptableContext() throws Exception {
+        vEcritureComptable.setReference("VE-2016/00001");
+        manager.checkEcritureComptableContext(vEcritureComptable);
+    }
+
+    @Test(expected = FunctionalException.class)
+public void checkEcritureComptableContextRG6() throws Exception {
+        assertThrows(FunctionalException.class, () -> {
+            vEcritureComptable.setReference("VE-2016/00002");
+            manager.checkEcritureComptableContext(vEcritureComptable);
+        });
+        assertThrows(FunctionalException.class, () -> {
+            vEcritureComptable.setId(0);
+            vEcritureComptable.setReference("VE-2016/00002");
+            manager.checkEcritureComptableContext(vEcritureComptable);
+        });
     }
 
 }
