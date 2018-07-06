@@ -2,7 +2,7 @@ language: java
 # use Java 8
 jdk:
   - oraclejdk8
-sudo: required
+sudo: false
 services:
   - docker
 #install: pip install codecov
@@ -19,9 +19,9 @@ before_script:
   - docker-compose -f docker/dev/docker-compose.yml up -d
 script: 
   - mvn --file ./src/pom.xml clean package -P test-consumer,test-business
-  - mvn --file ./src/pom.xml cobertura:cobertura
+ # - mvn --file ./src/pom.xml cobertura:cobertura
   - docker-compose -f docker/dev/docker-compose.yml ps
-after_success: codecov
+after_success:
   - bash <(curl -s https://codecov.io/bash)
 notifications:
   email: false
