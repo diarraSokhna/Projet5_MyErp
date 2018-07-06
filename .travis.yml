@@ -16,6 +16,8 @@ services:
 #  username: postgres
  # password: myerp
 before_script:
+  - docker-compose -f docker/dev/docker-compose.yml stop -d
+  - docker-compose -f docker/dev/docker-compose.yml rm -v -d
   - docker-compose -f docker/dev/docker-compose.yml up -d
 script: 
   - mvn --file ./src/pom.xml clean package -P test-consumer,test-business
