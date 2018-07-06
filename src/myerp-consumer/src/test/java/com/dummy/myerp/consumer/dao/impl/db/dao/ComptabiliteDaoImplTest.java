@@ -26,24 +26,19 @@ public class ComptabiliteDaoImplTest  extends ConsumerTestCase{
 
     // ==================== CompteComptable - GET ====================
 
-   /** @Test
+    @Test
     public void getListCompteComptable() {
-    	try {
-			Class.forName("org.postgresql.Driver");
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
         List<CompteComptable> vList = dao.getListCompteComptable();
         assertEquals(7, vList.size());
     }
-**/
+
 
     // ==================== JournalComptable - GET ====================
 
     @Test
     public void getListJournalComptable() {
         List<JournalComptable> vList = dao.getListJournalComptable();
-        assertEquals(4, vList.size());
+        assertEquals(3, vList.size());
     }
 
 
