@@ -65,6 +65,14 @@ public class EcritureComptableTest {
         vEcriture.setReference("BQ-2018/00005");
         Assert.assertTrue("La ref ne respecte pas le format \"XX-AAAA/#####\"", vEcriture.getReference().matches("[A-Z]{1,5}-\\d{4}/\\d{5}"));
     }
+	  @Test
+    void referenceCodeEqualJournalCode() {
+        vEcriture.setJournal(new JournalComptable("BQ", "Banque"));
+        vEcriture.setReference("BQ-2016/00003");
+        assertTrue(
+                vEcriture.getReference().substring(0, 2).equals(vEcriture.getJournal().getCode()),
+                vEcriture.toString());
+    }
 
 
 }
