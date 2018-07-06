@@ -31,5 +31,6 @@
 	</classpathentry>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry exported="true" kind="lib" path="src/main/resources/postgresql-42.1.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/main/resources/postgresql-9.4.1212.jre6"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
