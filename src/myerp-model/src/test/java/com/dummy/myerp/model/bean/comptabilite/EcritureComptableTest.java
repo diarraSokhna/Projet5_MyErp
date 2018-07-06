@@ -69,9 +69,7 @@ public class EcritureComptableTest {
     void referenceCodeEqualJournalCode() {
         vEcriture.setJournal(new JournalComptable("BQ", "Banque"));
         vEcriture.setReference("BQ-2016/00003");
-        assertTrue(
-                vEcriture.getReference().substring(0, 2).equals(vEcriture.getJournal().getCode()),
-                vEcriture.toString());
+        assertEquals(vEcriture.getReference().substring(0, 2), vEcriture.getJournal().getCode());
     }
 
 
