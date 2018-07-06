@@ -235,13 +235,17 @@
                 <version>2.1.1</version>
             </dependency>
             <!-- JDBC Drivers : PostgreSQL -->
-            <dependency>
+           <!-- <dependency>
                 <groupId>org.postgresql</groupId>
                 <artifactId>postgresql</artifactId>
-                <version>42.1.4</version>
+                <version>9.4.</version>
                 <scope>runtime</scope>
-            </dependency>
-
+            </dependency> -->
+                 <dependency>
+  <groupId>org.postgresql</groupId>
+  <artifactId>postgresql</artifactId>
+  <version>9.4.1212</version>
+</dependency>
             <!-- ===== Test unitaires ===== -->
             <dependency>
                 <groupId>junit</groupId>
