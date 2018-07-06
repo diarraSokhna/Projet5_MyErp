@@ -5,6 +5,7 @@ jdk:
 sudo: required
 services:
   - docker
+install: pip install codecov
 #addons:
 #  postgresql: "10.4"
 #services:
@@ -20,7 +21,7 @@ script:
   - mvn --file ./src/pom.xml clean package -P test-consumer,test-business
  # - mvn --file ./src/pom.xml cobertura:cobertura
   - docker-compose -f docker/dev/docker-compose.yml ps
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
+after_success: codecov
+  #- bash <(curl -s https://codecov.io/bash)
 notifications:
   email: false
