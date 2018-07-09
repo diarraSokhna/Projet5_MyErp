@@ -132,7 +132,7 @@ public class ComptabiliteManagerImplTest extends BusinessTestCase {
 	 manager.checkEcritureComptableContext(vEcritureComptable);
 	 }
 	
-	 @Test(expected = FunctionalException.class)
+	 @Test
 	 public void checkEcritureComptableContextRG6() throws Exception {
 	 vEcritureComptable.setReference("VE-2016/00002");
 	 manager.checkEcritureComptableContext(vEcritureComptable);
