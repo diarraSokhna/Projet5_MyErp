@@ -24,6 +24,12 @@ public class ComptabiliteManagerImplTest extends BusinessTestCase {
 	private ComptabiliteManager managerIntegration = getBusinessProxy().getComptabiliteManager();
 	EcritureComptable vEcritureComptable = new EcritureComptable();
 
+	 @Test
+    public void getListCompteComptable() {
+        List<CompteComptable> vList = managerIntegration.getListCompteComptable();
+        assertEquals(7, vList.size());
+    }
+	
 	@Test(expected = FunctionalException.class)
 	public void checkEcritureComptableUnit() throws Exception {
 		Date vCurrentDate = new Date();
