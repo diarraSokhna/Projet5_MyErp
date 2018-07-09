@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.dummy.myerp.consumer.dao.impl.db.dao.ComptabiliteDaoImplTest
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.097 s <<< FAILURE! - in com.dummy.myerp.consumer.dao.impl.db.dao.ComptabiliteDaoImplTest
+getListEcritureComptable(com.dummy.myerp.consumer.dao.impl.db.dao.ComptabiliteDaoImplTest)  Time elapsed: 0.197 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <4> but was: <6>
+	at com.dummy.myerp.consumer.dao.impl.db.dao.ComptabiliteDaoImplTest.getListEcritureComptable(ComptabiliteDaoImplTest.java:50)
+

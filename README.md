@@ -1,7 +1,7 @@
 # MyERP
 
 [![Build Status](https://travis-ci.org/diarraSokhna/Projet5_MyErp.svg?branch=master)](https://travis-ci.org/diarraSokhna/Projet5_MyErp/)
-
+[![Code Coverage](https://codecov.io/github/diarraSokhna/Projet5_MyErp/coverage.svg)](https://codecov.io/gh/diarraSokhna/Projet5_MyErp)
 
 ## Organisation du répertoire
 

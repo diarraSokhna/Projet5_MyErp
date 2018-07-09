@@ -75,12 +75,13 @@
             <artifactId>commons-dbcp2</artifactId>
             <scope>test</scope>
         </dependency>
-        <!-- Drivers JDBC PostgreSQL -->
-        <dependency>
+        <!-- Drivers JDBC PostgreSQL-->
+         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <scope>test</scope>
         </dependency>
+ 
     </dependencies>
 
 
