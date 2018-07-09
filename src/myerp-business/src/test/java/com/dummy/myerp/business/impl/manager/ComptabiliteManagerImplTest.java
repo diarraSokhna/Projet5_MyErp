@@ -28,7 +28,7 @@ public class ComptabiliteManagerImplTest extends BusinessTestCase {
 	 @Test
     public void getListCompteComptable() {
         List<CompteComptable> vList = managerIntegration.getListCompteComptable();
-        assertEquals(7, vList.size());
+        Assert.assertEquals(7, vList.size());
     }
 	
 	@Test(expected = FunctionalException.class)
