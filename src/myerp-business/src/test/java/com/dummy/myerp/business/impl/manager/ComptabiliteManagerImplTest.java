@@ -124,7 +124,7 @@ public class ComptabiliteManagerImplTest extends BusinessTestCase {
 		vEcritureComptable.getListLigneEcriture()
 				.add(new LigneEcritureComptable(new CompteComptable(2), null, null, new BigDecimal(123)));
 		manager.checkEcritureComptable(vEcritureComptable);
-		manager.checkEcritureComptableContext(pEcritureComptable);
+		manager.checkEcritureComptableContext(vEcritureComptable);
 	}
 
 	 @Test
