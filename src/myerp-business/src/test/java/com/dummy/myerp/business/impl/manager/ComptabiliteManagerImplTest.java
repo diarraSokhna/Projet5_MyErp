@@ -30,6 +30,29 @@ public class ComptabiliteManagerImplTest extends BusinessTestCase {
         List<CompteComptable> vList = managerIntegration.getListCompteComptable();
         Assert.assertEquals(7, vList.size());
     }
+	  // ==================== JournalComptable - GET ====================
+
+    @Test
+    public void getListJournalComptable() {
+        List<JournalComptable> vList = managerIntegration.getListJournalComptable();
+        Assert.assertEquals(4, vList.size());
+    }
+
+
+    // ==================== EcritureComptable - GET ====================
+
+   @Test
+    public void getListEcritureComptable() {
+        List<EcritureComptable> vList = managerIntegration.getListEcritureComptable();
+        Assert.assertEquals(8, vList.size());
+    }
+
+  /*  @Test
+    public void getEcritureComptable() throws NotFoundException {
+        EcritureComptable vEcritureComptable = managerIntegration.getEcritureComptable(-3);
+        Assert.assertEquals("BQ-2016/00003", vEcritureComptable.getReference());
+
+    }*/
 	
 	@Test(expected = FunctionalException.class)
 	public void checkEcritureComptableUnit() throws Exception {
