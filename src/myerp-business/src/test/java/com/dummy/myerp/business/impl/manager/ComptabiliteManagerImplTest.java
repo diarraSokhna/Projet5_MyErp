@@ -44,7 +44,7 @@ public class ComptabiliteManagerImplTest extends BusinessTestCase {
    @Test
     public void getListEcritureComptable() {
         List<EcritureComptable> vList = managerIntegration.getListEcritureComptable();
-        Assert.assertEquals(8, vList.size());
+        Assert.assertEquals(6, vList.size());
     }
 
   /*  @Test
