@@ -47,12 +47,12 @@ public class ComptabiliteManagerImplTest extends BusinessTestCase {
         Assert.assertEquals(5, vList.size());
     }
 
-  /*  @Test
+   @Test
     public void getEcritureComptable() throws NotFoundException {
         EcritureComptable vEcritureComptable = managerIntegration.getEcritureComptable(-3);
         Assert.assertEquals("BQ-2016/00003", vEcritureComptable.getReference());
 
-    }*/
+    }
 	
 	@Test(expected = FunctionalException.class)
 	public void checkEcritureComptableUnit() throws Exception {
