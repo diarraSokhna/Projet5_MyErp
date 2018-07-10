@@ -49,7 +49,7 @@ public class ComptabiliteManagerImplTest extends BusinessTestCase {
 
    @Test
     public void getEcritureComptable() throws NotFoundException {
-        EcritureComptable vEcritureComptable = manager.getEcritureComptable(-3);
+        vEcritureComptable = manager.getEcritureComptable(-3);
         Assert.assertEquals("BQ-2016/00003", vEcritureComptable.getReference());
 
     }
