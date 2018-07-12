@@ -37,6 +37,9 @@ public interface ComptabiliteManager {
      * @return {@link List}
      */
     List<EcritureComptable> getListEcritureComptable();
+    
+    
+    EcritureComptable getEcritureComptable(Integer pId) throws NotFoundException;
 
     /**
      * Ajoute une référence à l'écriture comptable.
