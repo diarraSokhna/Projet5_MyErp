@@ -47,7 +47,7 @@ public class ComptabiliteDaoImplTest  extends ConsumerTestCase{
    @Test
     public void getListEcritureComptable() {
         List<EcritureComptable> vList = dao.getListEcritureComptable();
-        assertEquals(12, vList.size());
+        assertEquals(5, vList.size());
     }
 
     @Test
