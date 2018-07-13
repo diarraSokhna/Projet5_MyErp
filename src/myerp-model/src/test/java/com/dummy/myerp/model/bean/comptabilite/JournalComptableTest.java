@@ -22,4 +22,14 @@ public class JournalComptableTest {
         vList.add(new JournalComptable("BQ", "Banque"));
         Assert.assertEquals(JournalComptable.getByCode(vList, "AC"), vJournal);
     }
+    
+       @Test
+    public void GettersTest() {
+    	vJournal.setCode("pCode");
+        Assert.assertTrue(vJournal.getCode().equals("pCode"));
+
+        vJournal.setLibelle("pLibelle");
+        Assert.assertTrue(vJournal.getLibelle().equals("pLibelle"));
+
+    }
 }
