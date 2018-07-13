@@ -22,10 +22,10 @@ before_script:
 script: 
   - mvn --file ./src/pom.xml clean package -P test-consumer,test-business
   - docker-compose -f docker/dev/docker-compose.yml ps
-#after_script:
-#  - docker-compose -f docker/dev/docker-compose.yml stop
- # - docker-compose -f docker/dev/docker-compose.yml rm -v
-#  - docker-compose -f docker/dev/docker-compose.yml up -d
+after_script:
+  - docker-compose -f docker/dev/docker-compose.yml stop
+  - docker-compose -f docker/dev/docker-compose.yml rm -v -d
+  - docker-compose -f docker/dev/docker-compose.yml up -d
 after_success:
   - mvn --file ./src/pom.xml cobertura:cobertura -P test-consumer,test-business
   - bash <(curl -s https://codecov.io/bash)
