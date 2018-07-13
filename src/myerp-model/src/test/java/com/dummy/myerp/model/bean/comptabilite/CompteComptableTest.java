@@ -23,4 +23,13 @@ public class CompteComptableTest {
         vList.add(new CompteComptable(411, "Clients"));
         Assert.assertEquals(CompteComptable.getByNumero(vList, 401), vCompte);
     }
+     @Test
+    public void GettersTest() {
+    	vCompte.setLibelle("pLibelle");
+        Assert.assertTrue(vCompte.getLibelle().equals("pLibelle"));
+
+        vCompte.setNumero(12);
+        Assert.assertTrue(vCompte.getNumero().equals(12));
+        
+    }
 }
