@@ -87,6 +87,9 @@ public class EcritureComptableTest {
 
 	        vEcriture.setId(1);
 	        Assert.assertTrue(vEcriture.getId().equals(1));
+		    
+	        vEcriture.setLibelle("libellé");
+	        Assert.assertTrue(vEcriture.getLibelle().equals("libellé"));
 	    }
 
 
