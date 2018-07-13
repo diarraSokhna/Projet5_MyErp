@@ -3,6 +3,7 @@ package com.dummy.myerp.model.bean.comptabilite;
 import static org.junit.Assert.*;
 
 import java.math.BigDecimal;
+import java.util.Date;
 
 import org.apache.commons.lang3.ObjectUtils;
 import org.junit.Assert;
@@ -72,5 +73,26 @@ public class EcritureComptableTest {
         assertEquals(vEcriture.getReference().substring(0, 2), vEcriture.getJournal().getCode());
     }
 
+	  @Test
+	    public void GettersTest() {
+	        String ref = "reference";
+	        vEcriture.setLibelle(ref);
+
+	        Assert.assertTrue(vEcriture.getLibelle().equals("reference"));
+
+	        vEcriture.setDate(new Date());
+	        Assert.assertTrue(vEcriture.getDate().equals(new Date()));
+
+	        vEcriture.setReference("reference 1");
+	        Assert.assertTrue(vEcriture.getReference().equals("reference 1"));
+
+	        vEcriture.setId(1);
+	        Assert.assertTrue(vEcriture.getId().equals(1));
+	        
+	        vEcriture.setLibelle("libellé");
+	        Assert.assertTrue(vEcriture.getLibelle().equals("libellé"));
+	        
+	        
+	    }
 
 }

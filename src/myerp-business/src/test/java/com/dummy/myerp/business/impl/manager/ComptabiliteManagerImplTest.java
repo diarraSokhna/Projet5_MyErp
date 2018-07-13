@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -24,6 +25,35 @@ public class ComptabiliteManagerImplTest extends BusinessTestCase {
 	private ComptabiliteManager managerIntegration = getBusinessProxy().getComptabiliteManager();
 	EcritureComptable vEcritureComptable = new EcritureComptable();
 
+	 @Test
+    public void getListCompteComptable() {
+        List<CompteComptable> vList = managerIntegration.getListCompteComptable();
+        Assert.assertEquals(7, vList.size());
+    }
+	  // ==================== JournalComptable - GET ====================
+
+    @Test
+    public void getListJournalComptable() {
+        List<JournalComptable> vList = managerIntegration.getListJournalComptable();
+        Assert.assertEquals(4, vList.size());
+    }
+
+
+    // ==================== EcritureComptable - GET ====================
+
+   @Test
+    public void getListEcritureComptable() {
+        List<EcritureComptable> vList = managerIntegration.getListEcritureComptable();
+        Assert.assertEquals(13, vList.size());
+    }
+
+   @Test
+    public void getEcritureComptable() throws NotFoundException {
+        vEcritureComptable = manager.getEcritureComptable(-3);
+        Assert.assertEquals("BQ-2016/00003", vEcritureComptable.getReference());
+
+    }
+	
 	@Test(expected = FunctionalException.class)
 	public void checkEcritureComptableUnit() throws Exception {
 		Date vCurrentDate = new Date();
@@ -124,15 +154,16 @@ public class ComptabiliteManagerImplTest extends BusinessTestCase {
 		vEcritureComptable.getListLigneEcriture()
 				.add(new LigneEcritureComptable(new CompteComptable(2), null, null, new BigDecimal(123)));
 		manager.checkEcritureComptable(vEcritureComptable);
+		manager.checkEcritureComptableContext(vEcritureComptable);
 	}
 
-//	 @Test
-//	 public void checkEcritureComptableContext() throws Exception {
-//	 vEcritureComptable.setReference("VE-2016/00001");
-//	 manager.checkEcritureComptableContext(vEcritureComptable);
-//	 }
+	 @Test
+	 public void checkEcritureComptableContext() throws Exception {
+	 vEcritureComptable.setReference("VE-2016/00001");
+	 manager.checkEcritureComptableContext(vEcritureComptable);
+	 }
 	
-	 @Test(expected = FunctionalException.class)
+	 @Test
 	 public void checkEcritureComptableContextRG6() throws Exception {
 	 vEcritureComptable.setReference("VE-2016/00002");
 	 manager.checkEcritureComptableContext(vEcritureComptable);
@@ -140,7 +171,6 @@ public class ComptabiliteManagerImplTest extends BusinessTestCase {
 	 vEcritureComptable.setId(0);
 	 vEcritureComptable.setReference("VE-2016/00002");
 	 manager.checkEcritureComptableContext(vEcritureComptable);
-	
 	 }
 
 }

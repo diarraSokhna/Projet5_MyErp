@@ -1,0 +1,720 @@
+<?xml version="1.0"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+
+<coverage line-rate="0.5117647058823529" branch-rate="0.20588235294117646" lines-covered="87" lines-valid="170" branches-covered="7" branches-valid="34" complexity="1.641025641025641" version="2.1.1" timestamp="1531481169545">
+	<sources>
+		<source>S:/MyERP/src/myerp-business/target/generated-sources/annotations</source>
+		<source>--source</source>
+		<source>S:/MyERP/src/myerp-business/src/main/java</source>
+	</sources>
+	<packages>
+		<package name="com.dummy.myerp.business.contrat" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+			<classes>
+				<class name="com.dummy.myerp.business.contrat.BusinessProxy" filename="com/dummy/myerp/business/contrat/BusinessProxy.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+					</methods>
+					<lines>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package name="com.dummy.myerp.business.contrat.manager" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+			<classes>
+				<class name="com.dummy.myerp.business.contrat.manager.ComptabiliteManager" filename="com/dummy/myerp/business/contrat/manager/ComptabiliteManager.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+					</methods>
+					<lines>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package name="com.dummy.myerp.business.impl" line-rate="0.8461538461538461" branch-rate="0.3333333333333333" complexity="1.2666666666666666">
+			<classes>
+				<class name="com.dummy.myerp.business.impl.AbstractBusinessManager" filename="com/dummy/myerp/business/impl/AbstractBusinessManager.java" line-rate="0.9166666666666666" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="15" hits="14" branch="false"/>
+							</lines>
+						</method>
+						<method name="configure" signature="(Lcom/dummy/myerp/business/contrat/BusinessProxy;Lcom/dummy/myerp/consumer/dao/contrat/DaoProxy;Lcom/dummy/myerp/business/impl/TransactionManager;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="37" hits="1" branch="false"/>
+								<line number="38" hits="1" branch="false"/>
+								<line number="39" hits="1" branch="false"/>
+								<line number="40" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="getBusinessProxy" signature="()Lcom/dummy/myerp/business/contrat/BusinessProxy;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="51" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getConstraintValidator" signature="()Ljavax/validation/Validator;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="81" hits="6" branch="false"/>
+								<line number="82" hits="6" branch="false"/>
+								<line number="83" hits="6" branch="false"/>
+								<line number="84" hits="6" branch="false"/>
+							</lines>
+						</method>
+						<method name="getDaoProxy" signature="()Lcom/dummy/myerp/consumer/dao/contrat/DaoProxy;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="61" hits="11" branch="false"/>
+							</lines>
+						</method>
+						<method name="getTransactionManager" signature="()Lcom/dummy/myerp/business/impl/TransactionManager;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="71" hits="6" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="15" hits="14" branch="false"/>
+						<line number="37" hits="1" branch="false"/>
+						<line number="38" hits="1" branch="false"/>
+						<line number="39" hits="1" branch="false"/>
+						<line number="40" hits="1" branch="false"/>
+						<line number="51" hits="0" branch="false"/>
+						<line number="61" hits="11" branch="false"/>
+						<line number="71" hits="6" branch="false"/>
+						<line number="81" hits="6" branch="false"/>
+						<line number="82" hits="6" branch="false"/>
+						<line number="83" hits="6" branch="false"/>
+						<line number="84" hits="6" branch="false"/>
+					</lines>
+				</class>
+				<class name="com.dummy.myerp.business.impl.BusinessProxyImpl" filename="com/dummy/myerp/business/impl/BusinessProxyImpl.java" line-rate="0.7272727272727273" branch-rate="0.0" complexity="1.5">
+					<methods>
+						<method name="&lt;clinit&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="26" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="21" hits="1" branch="false"/>
+								<line number="58" hits="1" branch="false"/>
+								<line number="59" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="getComptabiliteManager" signature="()Lcom/dummy/myerp/business/contrat/manager/ComptabiliteManager;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="65" hits="13" branch="false"/>
+							</lines>
+						</method>
+						<method name="getInstance" signature="()Lcom/dummy/myerp/business/impl/BusinessProxyImpl;" line-rate="0.0" branch-rate="0.0" complexity="0">
+							<lines>
+								<line number="34" hits="0" branch="true" condition-coverage="0 % (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0 %"/>
+									</conditions>
+								</line>
+								<line number="35" hits="0" branch="false"/>
+								<line number="37" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getInstance" signature="(Lcom/dummy/myerp/consumer/dao/contrat/DaoProxy;Lcom/dummy/myerp/business/impl/TransactionManager;)Lcom/dummy/myerp/business/impl/BusinessProxyImpl;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="49" hits="1" branch="false"/>
+								<line number="50" hits="1" branch="false"/>
+								<line number="51" hits="1" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="21" hits="1" branch="false"/>
+						<line number="26" hits="1" branch="false"/>
+						<line number="34" hits="0" branch="true" condition-coverage="0 % (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0 %"/>
+							</conditions>
+						</line>
+						<line number="35" hits="0" branch="false"/>
+						<line number="37" hits="0" branch="false"/>
+						<line number="49" hits="1" branch="false"/>
+						<line number="50" hits="1" branch="false"/>
+						<line number="51" hits="1" branch="false"/>
+						<line number="58" hits="1" branch="false"/>
+						<line number="59" hits="1" branch="false"/>
+						<line number="65" hits="13" branch="false"/>
+					</lines>
+				</class>
+				<class name="com.dummy.myerp.business.impl.TransactionManager" filename="com/dummy/myerp/business/impl/TransactionManager.java" line-rate="0.875" branch-rate="0.5" complexity="1.3333333333333333">
+					<methods>
+						<method name="&lt;clinit&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="20" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="43" hits="1" branch="false"/>
+								<line number="44" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="beginTransactionMyERP" signature="()Lorg/springframework/transaction/TransactionStatus;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="58" hits="2" branch="false"/>
+								<line number="59" hits="2" branch="false"/>
+								<line number="60" hits="2" branch="false"/>
+								<line number="62" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="commitMyERP" signature="(Lorg/springframework/transaction/TransactionStatus;)V" line-rate="1.0" branch-rate="0.5" complexity="0">
+							<lines>
+								<line number="71" hits="2" branch="true" condition-coverage="50 % (1/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50 %"/>
+									</conditions>
+								</line>
+								<line number="72" hits="2" branch="false"/>
+								<line number="74" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="getInstance" signature="()Lcom/dummy/myerp/business/impl/TransactionManager;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="27" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getInstance" signature="(Lorg/springframework/transaction/PlatformTransactionManager;)Lcom/dummy/myerp/business/impl/TransactionManager;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="36" hits="1" branch="false"/>
+								<line number="37" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="rollbackMyERP" signature="(Lorg/springframework/transaction/TransactionStatus;)V" line-rate="0.6666666666666666" branch-rate="0.5" complexity="0">
+							<lines>
+								<line number="82" hits="2" branch="true" condition-coverage="50 % (1/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50 %"/>
+									</conditions>
+								</line>
+								<line number="83" hits="0" branch="false"/>
+								<line number="85" hits="2" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="20" hits="1" branch="false"/>
+						<line number="27" hits="0" branch="false"/>
+						<line number="36" hits="1" branch="false"/>
+						<line number="37" hits="1" branch="false"/>
+						<line number="43" hits="1" branch="false"/>
+						<line number="44" hits="1" branch="false"/>
+						<line number="58" hits="2" branch="false"/>
+						<line number="59" hits="2" branch="false"/>
+						<line number="60" hits="2" branch="false"/>
+						<line number="62" hits="2" branch="false"/>
+						<line number="71" hits="2" branch="true" condition-coverage="50 % (1/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50 %"/>
+							</conditions>
+						</line>
+						<line number="72" hits="2" branch="false"/>
+						<line number="74" hits="2" branch="false"/>
+						<line number="82" hits="2" branch="true" condition-coverage="50 % (1/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50 %"/>
+							</conditions>
+						</line>
+						<line number="83" hits="0" branch="false"/>
+						<line number="85" hits="2" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package name="com.dummy.myerp.business.impl.manager" line-rate="0.5294117647058824" branch-rate="0.17857142857142858" complexity="2.6153846153846154">
+			<classes>
+				<class name="com.dummy.myerp.business.impl.manager.ComptabiliteManagerImpl" filename="com/dummy/myerp/business/impl/manager/ComptabiliteManagerImpl.java" line-rate="0.5294117647058824" branch-rate="0.17857142857142858" complexity="2.6153846153846154">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="34" hits="14" branch="false"/>
+								<line number="35" hits="14" branch="false"/>
+							</lines>
+						</method>
+						<method name="addReference" signature="(Lcom/dummy/myerp/model/bean/comptabilite/EcritureComptable;)V" line-rate="0.9130434782608695" branch-rate="0.5" complexity="0">
+							<lines>
+								<line number="85" hits="1" branch="false"/>
+								<line number="87" hits="1" branch="false"/>
+								<line number="89" hits="1" branch="false"/>
+								<line number="91" hits="1" branch="false"/>
+								<line number="92" hits="1" branch="false"/>
+								<line number="93" hits="1" branch="false"/>
+								<line number="95" hits="1" branch="false"/>
+								<line number="96" hits="1" branch="false"/>
+								<line number="98" hits="1" branch="false"/>
+								<line number="103" hits="1" branch="true" condition-coverage="50 % (1/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50 %"/>
+									</conditions>
+								</line>
+								<line number="104" hits="0" branch="false"/>
+								<line number="105" hits="0" branch="false"/>
+								<line number="107" hits="1" branch="false"/>
+								<line number="112" hits="2" branch="false"/>
+								<line number="114" hits="1" branch="false"/>
+								<line number="115" hits="1" branch="false"/>
+								<line number="116" hits="1" branch="false"/>
+								<line number="120" hits="1" branch="false"/>
+								<line number="121" hits="1" branch="false"/>
+								<line number="122" hits="1" branch="false"/>
+								<line number="123" hits="1" branch="false"/>
+								<line number="124" hits="1" branch="false"/>
+								<line number="126" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="checkEcritureComptable" signature="(Lcom/dummy/myerp/model/bean/comptabilite/EcritureComptable;)V" line-rate="0.3333333333333333" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="134" hits="1" branch="false"/>
+								<line number="135" hits="0" branch="false"/>
+								<line number="136" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="checkEcritureComptableContext" signature="(Lcom/dummy/myerp/model/bean/comptabilite/EcritureComptable;)V" line-rate="0.7142857142857143" branch-rate="0.16666666666666666" complexity="0">
+							<lines>
+								<line number="223" hits="3" branch="true" condition-coverage="50 % (1/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50 %"/>
+									</conditions>
+								</line>
+								<line number="226" hits="3" branch="false"/>
+								<line number="227" hits="3" branch="false"/>
+								<line number="234" hits="0" branch="true" condition-coverage="0 % (0/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0 %"/>
+										<condition number="1" type="jump" coverage="0 %"/>
+									</conditions>
+								</line>
+								<line number="235" hits="0" branch="false"/>
+								<line number="237" hits="3" branch="false"/>
+								<line number="242" hits="3" branch="false"/>
+							</lines>
+						</method>
+						<method name="checkEcritureComptableUnit" signature="(Lcom/dummy/myerp/model/bean/comptabilite/EcritureComptable;)V" line-rate="0.23333333333333334" branch-rate="0.15" complexity="0">
+							<lines>
+								<line number="151" hits="6" branch="false"/>
+								<line number="152" hits="6" branch="true" condition-coverage="100 % (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100 %"/>
+									</conditions>
+								</line>
+								<line number="153" hits="8" branch="false"/>
+								<line number="154" hits="8" branch="false"/>
+								<line number="155" hits="4" branch="false"/>
+								<line number="160" hits="2" branch="true" condition-coverage="50 % (1/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50 %"/>
+									</conditions>
+								</line>
+								<line number="161" hits="2" branch="false"/>
+								<line number="166" hits="0" branch="false"/>
+								<line number="167" hits="0" branch="false"/>
+								<line number="168" hits="0" branch="true" condition-coverage="0 % (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0 %"/>
+									</conditions>
+								</line>
+								<line number="169" hits="0" branch="true" condition-coverage="0 % (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0 %"/>
+									</conditions>
+								</line>
+								<line number="170" hits="0" branch="false"/>
+								<line number="171" hits="0" branch="false"/>
+								<line number="173" hits="0" branch="true" condition-coverage="0 % (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0 %"/>
+									</conditions>
+								</line>
+								<line number="174" hits="0" branch="false"/>
+								<line number="175" hits="0" branch="false"/>
+								<line number="182" hits="0" branch="true" condition-coverage="0 % (0/6)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0 %"/>
+										<condition number="1" type="jump" coverage="0 %"/>
+										<condition number="2" type="jump" coverage="0 %"/>
+									</conditions>
+								</line>
+								<line number="183" hits="0" branch="false"/>
+								<line number="184" hits="0" branch="false"/>
+								<line number="192" hits="0" branch="false"/>
+								<line number="193" hits="0" branch="false"/>
+								<line number="194" hits="0" branch="false"/>
+								<line number="195" hits="0" branch="false"/>
+								<line number="196" hits="0" branch="false"/>
+								<line number="197" hits="0" branch="false"/>
+								<line number="201" hits="0" branch="true" condition-coverage="0 % (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0 %"/>
+									</conditions>
+								</line>
+								<line number="202" hits="0" branch="false"/>
+								<line number="206" hits="0" branch="true" condition-coverage="0 % (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0 %"/>
+									</conditions>
+								</line>
+								<line number="207" hits="0" branch="false"/>
+								<line number="210" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="deleteEcritureComptable" signature="(Ljava/lang/Integer;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="280" hits="0" branch="false"/>
+								<line number="282" hits="0" branch="false"/>
+								<line number="283" hits="0" branch="false"/>
+								<line number="284" hits="0" branch="false"/>
+								<line number="285" hits="0" branch="false"/>
+								<line number="286" hits="0" branch="false"/>
+								<line number="287" hits="0" branch="false"/>
+								<line number="288" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getEcritureComptable" signature="(Ljava/lang/Integer;)Lcom/dummy/myerp/model/bean/comptabilite/EcritureComptable;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="58" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="getListCompteComptable" signature="()Ljava/util/List;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="40" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="getListEcritureComptable" signature="()Ljava/util/List;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="53" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="getListJournalComptable" signature="()Ljava/util/List;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="45" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="insertEcritureComptable" signature="(Lcom/dummy/myerp/model/bean/comptabilite/EcritureComptable;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="249" hits="0" branch="false"/>
+								<line number="250" hits="0" branch="false"/>
+								<line number="252" hits="0" branch="false"/>
+								<line number="253" hits="0" branch="false"/>
+								<line number="254" hits="0" branch="false"/>
+								<line number="255" hits="0" branch="false"/>
+								<line number="256" hits="0" branch="false"/>
+								<line number="257" hits="0" branch="false"/>
+								<line number="258" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="insertOrUpdateSequenceEcritureComptable" signature="(Lcom/dummy/myerp/model/bean/comptabilite/SequenceEcritureComptable;)V" line-rate="0.875" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="292" hits="1" branch="false"/>
+								<line number="294" hits="1" branch="false"/>
+								<line number="295" hits="1" branch="false"/>
+								<line number="296" hits="1" branch="false"/>
+								<line number="297" hits="1" branch="false"/>
+								<line number="298" hits="1" branch="false"/>
+								<line number="299" hits="0" branch="false"/>
+								<line number="300" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="updateEcritureComptable" signature="(Lcom/dummy/myerp/model/bean/comptabilite/EcritureComptable;)V" line-rate="0.875" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="265" hits="1" branch="false"/>
+								<line number="267" hits="1" branch="false"/>
+								<line number="268" hits="1" branch="false"/>
+								<line number="269" hits="1" branch="false"/>
+								<line number="270" hits="1" branch="false"/>
+								<line number="271" hits="1" branch="false"/>
+								<line number="272" hits="0" branch="false"/>
+								<line number="273" hits="1" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="34" hits="14" branch="false"/>
+						<line number="35" hits="14" branch="false"/>
+						<line number="40" hits="1" branch="false"/>
+						<line number="45" hits="1" branch="false"/>
+						<line number="53" hits="1" branch="false"/>
+						<line number="58" hits="1" branch="false"/>
+						<line number="85" hits="1" branch="false"/>
+						<line number="87" hits="1" branch="false"/>
+						<line number="89" hits="1" branch="false"/>
+						<line number="91" hits="1" branch="false"/>
+						<line number="92" hits="1" branch="false"/>
+						<line number="93" hits="1" branch="false"/>
+						<line number="95" hits="1" branch="false"/>
+						<line number="96" hits="1" branch="false"/>
+						<line number="98" hits="1" branch="false"/>
+						<line number="103" hits="1" branch="true" condition-coverage="50 % (1/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50 %"/>
+							</conditions>
+						</line>
+						<line number="104" hits="0" branch="false"/>
+						<line number="105" hits="0" branch="false"/>
+						<line number="107" hits="1" branch="false"/>
+						<line number="112" hits="2" branch="false"/>
+						<line number="114" hits="1" branch="false"/>
+						<line number="115" hits="1" branch="false"/>
+						<line number="116" hits="1" branch="false"/>
+						<line number="120" hits="1" branch="false"/>
+						<line number="121" hits="1" branch="false"/>
+						<line number="122" hits="1" branch="false"/>
+						<line number="123" hits="1" branch="false"/>
+						<line number="124" hits="1" branch="false"/>
+						<line number="126" hits="1" branch="false"/>
+						<line number="134" hits="1" branch="false"/>
+						<line number="135" hits="0" branch="false"/>
+						<line number="136" hits="0" branch="false"/>
+						<line number="151" hits="6" branch="false"/>
+						<line number="152" hits="6" branch="true" condition-coverage="100 % (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100 %"/>
+							</conditions>
+						</line>
+						<line number="153" hits="8" branch="false"/>
+						<line number="154" hits="8" branch="false"/>
+						<line number="155" hits="4" branch="false"/>
+						<line number="160" hits="2" branch="true" condition-coverage="50 % (1/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50 %"/>
+							</conditions>
+						</line>
+						<line number="161" hits="2" branch="false"/>
+						<line number="166" hits="0" branch="false"/>
+						<line number="167" hits="0" branch="false"/>
+						<line number="168" hits="0" branch="true" condition-coverage="0 % (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0 %"/>
+							</conditions>
+						</line>
+						<line number="169" hits="0" branch="true" condition-coverage="0 % (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0 %"/>
+							</conditions>
+						</line>
+						<line number="170" hits="0" branch="false"/>
+						<line number="171" hits="0" branch="false"/>
+						<line number="173" hits="0" branch="true" condition-coverage="0 % (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0 %"/>
+							</conditions>
+						</line>
+						<line number="174" hits="0" branch="false"/>
+						<line number="175" hits="0" branch="false"/>
+						<line number="182" hits="0" branch="true" condition-coverage="0 % (0/6)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0 %"/>
+								<condition number="1" type="jump" coverage="0 %"/>
+								<condition number="2" type="jump" coverage="0 %"/>
+							</conditions>
+						</line>
+						<line number="183" hits="0" branch="false"/>
+						<line number="184" hits="0" branch="false"/>
+						<line number="192" hits="0" branch="false"/>
+						<line number="193" hits="0" branch="false"/>
+						<line number="194" hits="0" branch="false"/>
+						<line number="195" hits="0" branch="false"/>
+						<line number="196" hits="0" branch="false"/>
+						<line number="197" hits="0" branch="false"/>
+						<line number="201" hits="0" branch="true" condition-coverage="0 % (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0 %"/>
+							</conditions>
+						</line>
+						<line number="202" hits="0" branch="false"/>
+						<line number="206" hits="0" branch="true" condition-coverage="0 % (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0 %"/>
+							</conditions>
+						</line>
+						<line number="207" hits="0" branch="false"/>
+						<line number="210" hits="0" branch="false"/>
+						<line number="223" hits="3" branch="true" condition-coverage="50 % (1/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50 %"/>
+							</conditions>
+						</line>
+						<line number="226" hits="3" branch="false"/>
+						<line number="227" hits="3" branch="false"/>
+						<line number="234" hits="0" branch="true" condition-coverage="0 % (0/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0 %"/>
+								<condition number="1" type="jump" coverage="0 %"/>
+							</conditions>
+						</line>
+						<line number="235" hits="0" branch="false"/>
+						<line number="237" hits="3" branch="false"/>
+						<line number="242" hits="3" branch="false"/>
+						<line number="249" hits="0" branch="false"/>
+						<line number="250" hits="0" branch="false"/>
+						<line number="252" hits="0" branch="false"/>
+						<line number="253" hits="0" branch="false"/>
+						<line number="254" hits="0" branch="false"/>
+						<line number="255" hits="0" branch="false"/>
+						<line number="256" hits="0" branch="false"/>
+						<line number="257" hits="0" branch="false"/>
+						<line number="258" hits="0" branch="false"/>
+						<line number="265" hits="1" branch="false"/>
+						<line number="267" hits="1" branch="false"/>
+						<line number="268" hits="1" branch="false"/>
+						<line number="269" hits="1" branch="false"/>
+						<line number="270" hits="1" branch="false"/>
+						<line number="271" hits="1" branch="false"/>
+						<line number="272" hits="0" branch="false"/>
+						<line number="273" hits="1" branch="false"/>
+						<line number="280" hits="0" branch="false"/>
+						<line number="282" hits="0" branch="false"/>
+						<line number="283" hits="0" branch="false"/>
+						<line number="284" hits="0" branch="false"/>
+						<line number="285" hits="0" branch="false"/>
+						<line number="286" hits="0" branch="false"/>
+						<line number="287" hits="0" branch="false"/>
+						<line number="288" hits="0" branch="false"/>
+						<line number="292" hits="1" branch="false"/>
+						<line number="294" hits="1" branch="false"/>
+						<line number="295" hits="1" branch="false"/>
+						<line number="296" hits="1" branch="false"/>
+						<line number="297" hits="1" branch="false"/>
+						<line number="298" hits="1" branch="false"/>
+						<line number="299" hits="0" branch="false"/>
+						<line number="300" hits="1" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package name="com.dummy.myerp.testbusiness.business" line-rate="0.0" branch-rate="1.0" complexity="0.0">
+			<classes>
+				<class name="com.dummy.myerp.testbusiness.business.BusinessTestCase" filename="com/dummy/myerp/testbusiness/business/BusinessTestCase.java" line-rate="0.0" branch-rate="1.0" complexity="0.0">
+					<methods>
+						<method name="&lt;clinit&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="14" hits="0" branch="false"/>
+								<line number="18" hits="0" branch="false"/>
+								<line number="20" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="27" hits="0" branch="false"/>
+								<line number="28" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getBusinessProxy" signature="()Lcom/dummy/myerp/business/contrat/BusinessProxy;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="33" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getTransactionManager" signature="()Lcom/dummy/myerp/business/impl/TransactionManager;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="37" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="14" hits="0" branch="false"/>
+						<line number="18" hits="0" branch="false"/>
+						<line number="20" hits="0" branch="false"/>
+						<line number="27" hits="0" branch="false"/>
+						<line number="28" hits="0" branch="false"/>
+						<line number="33" hits="0" branch="false"/>
+						<line number="37" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="com.dummy.myerp.testbusiness.business.SpringRegistry" filename="com/dummy/myerp/testbusiness/business/SpringRegistry.java" line-rate="0.0" branch-rate="1.0" complexity="0.0">
+					<methods>
+						<method name="&lt;clinit&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="17" hits="0" branch="false"/>
+								<line number="21" hits="0" branch="false"/>
+								<line number="26" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="39" hits="0" branch="false"/>
+								<line number="40" hits="0" branch="false"/>
+								<line number="41" hits="0" branch="false"/>
+								<line number="42" hits="0" branch="false"/>
+								<line number="43" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getBean" signature="(Ljava/lang/String;)Ljava/lang/Object;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="71" hits="0" branch="false"/>
+								<line number="72" hits="0" branch="false"/>
+								<line number="73" hits="0" branch="false"/>
+								<line number="74" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getBusinessProxy" signature="()Lcom/dummy/myerp/business/contrat/BusinessProxy;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="84" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getInstance" signature="()Lcom/dummy/myerp/testbusiness/business/SpringRegistry;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="51" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getTransactionManager" signature="()Lcom/dummy/myerp/business/impl/TransactionManager;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="94" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="init" signature="()Lorg/springframework/context/ApplicationContext;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="61" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="17" hits="0" branch="false"/>
+						<line number="21" hits="0" branch="false"/>
+						<line number="26" hits="0" branch="false"/>
+						<line number="39" hits="0" branch="false"/>
+						<line number="40" hits="0" branch="false"/>
+						<line number="41" hits="0" branch="false"/>
+						<line number="42" hits="0" branch="false"/>
+						<line number="43" hits="0" branch="false"/>
+						<line number="51" hits="0" branch="false"/>
+						<line number="61" hits="0" branch="false"/>
+						<line number="71" hits="0" branch="false"/>
+						<line number="72" hits="0" branch="false"/>
+						<line number="73" hits="0" branch="false"/>
+						<line number="74" hits="0" branch="false"/>
+						<line number="84" hits="0" branch="false"/>
+						<line number="94" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="com.dummy.myerp.testbusiness.business.TestInitSpring" filename="com/dummy/myerp/testbusiness/business/TestInitSpring.java" line-rate="0.0" branch-rate="1.0" complexity="0.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="17" hits="0" branch="false"/>
+								<line number="18" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="testInit" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="26" hits="0" branch="false"/>
+								<line number="27" hits="0" branch="false"/>
+								<line number="28" hits="0" branch="false"/>
+								<line number="29" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="17" hits="0" branch="false"/>
+						<line number="18" hits="0" branch="false"/>
+						<line number="26" hits="0" branch="false"/>
+						<line number="27" hits="0" branch="false"/>
+						<line number="28" hits="0" branch="false"/>
+						<line number="29" hits="0" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+	</packages>
+</coverage>
