@@ -3,6 +3,7 @@ package com.dummy.myerp.model.bean.comptabilite;
 import static org.junit.Assert.*;
 
 import java.math.BigDecimal;
+import java.util.Date;
 
 import org.apache.commons.lang3.ObjectUtils;
 import org.junit.Assert;
