@@ -71,6 +71,22 @@ public class EcritureComptableTest {
         vEcriture.setReference("BQ-2016/00003");
         assertEquals(vEcriture.getReference().substring(0, 2), vEcriture.getJournal().getCode());
     }
+	 @Test
+	    public void GettersTest() {
+	        String ref = "reference";
+	        vEcriture.setLibelle(ref);
+
+	        Assert.assertTrue(vEcriture.getLibelle().equals("reference"));
+
+	        vEcriture.setDate(new Date());
+	        Assert.assertTrue(vEcriture.getDate().equals(new Date()));
+
+	        vEcriture.setReference("reference 1");
+	        Assert.assertTrue(vEcriture.getReference().equals("reference 1"));
+
+	        vEcriture.setId(1);
+	        Assert.assertTrue(vEcriture.getId().equals(1));
+	    }
 
 
 }
