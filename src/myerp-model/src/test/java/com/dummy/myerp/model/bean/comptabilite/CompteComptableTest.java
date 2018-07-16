@@ -23,7 +23,7 @@ public class CompteComptableTest {
         vList.add(new CompteComptable(411, "Clients"));
         Assert.assertEquals(CompteComptable.getByNumero(vList, 401), vCompte);
     }
-    
+
     @Test
     public void GettersTest() {
     	vCompte.setLibelle("pLibelle");
