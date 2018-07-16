@@ -116,8 +116,8 @@ public class ComptabiliteManagerImplTest extends BusinessTestCase {
 
 	}
 
-	@Test
-	public void addReference() throws FunctionalException, NotFoundException {
+	@Test(expected = FunctionalException.class)
+	public void addReference() throws NotFoundException {
 		vEcritureComptable.setId(-1);
 		vEcritureComptable.setJournal(new JournalComptable("AC", "Achat"));
 		try {
