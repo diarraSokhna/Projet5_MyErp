@@ -42,8 +42,7 @@ Il comporte :
 	
 ## Modifications et Corrections
 
-*   Dans l'entité `EcritureComptable`, modificationde la méthode `getTotalCredit()` qui appelle la méthode `getDebit()` au lieu de `getCredit()` et par la même occasion correction du test `isEquilibree()` qui appeler la methode `isEquilibree()` du bean `EcritureComptable` qui lui appeler `getTotalCredit()`
-*   Dans la classe `ComptabiliteManagerImpl`, ajout la ligne `this.checkEcritureComptable(pEcritureComptable)` dans la methode `updateEcritureComptable()` en haut afin de vérifier que la référence de l'écriture comptable respecte les règles de comptabilité
+*   Dans l'entité `EcritureComptable`, modification de la méthode `getTotalCredit()` qui appelle la méthode `getDebit()` au lieu de `getCredit()` et par la même occasion correction du test `isEquilibree()` qui appeler la methode `isEquilibree()` du bean `EcritureComptable` qui lui appeler `getTotalCredit()`
 *   Dans la classe `SpringRegistry` de la couche business, modification de la variable `CONTEXT_APPLI_LOCATION` afin d'adapter le chemin d'accès au fichier `bootstrapContext.xml` qui est un conteneur Spring IoC, dans lequel on importe le `businessContext.xml`, `consumerContext.xml` et le `datasourceContext.xml` qui va redéfinir le bean `dataSourceMYERP` pour les tests
 
 
