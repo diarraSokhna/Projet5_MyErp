@@ -5,16 +5,6 @@ jdk:
 sudo: false
 services:
   - docker
-#install: pip install codecov
-#addons:
-#  postgresql: "10.4"
-#services:
-#  - postgresql
-#test:
-#  adapter: postgresql
-#  database: db_myerp
-#  username: postgres
- # password: myerp
 before_script:
   - docker-compose -f docker/dev/docker-compose.yml stop
   - docker-compose -f docker/dev/docker-compose.yml rm -v
