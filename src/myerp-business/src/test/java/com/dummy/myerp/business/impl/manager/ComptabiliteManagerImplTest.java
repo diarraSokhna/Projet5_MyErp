@@ -141,7 +141,7 @@ public class ComptabiliteManagerImplTest extends BusinessTestCase {
 
 		managerIntegration.addReference(vEcritureComptable);
 		
-		  vEcritureComptable.setDate(vCurrentDate);
+		  vEcritureComptable.setDate(new Date());
             managerIntegration.addReference(vEcritureComptable);
 
 	}
