@@ -123,17 +123,21 @@ public class ComptabiliteManagerImplTest extends BusinessTestCase {
 		vEcritureComptable.setId(-1);
 		vEcritureComptable.setJournal(new JournalComptable("AC", "Achat"));
 		try {
-			vEcritureComptable.setDate(new SimpleDateFormat("yyyy/MM/dd").parse("2016/05/31"));
+			vEcritureComptable.setDate(new SimpleDateFormat("yyyy/MM/dd").parse("2016/12/31"));
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
-		vEcritureComptable.setLibelle("Fourniture bureau");
-		vEcritureComptable.getListLigneEcriture().add(
-				new LigneEcritureComptable(new CompteComptable(606), "Fourniture bureau", new BigDecimal(43), null));
-		vEcritureComptable.getListLigneEcriture()
-				.add(new LigneEcritureComptable(new CompteComptable(4456), "TVA 20%", new BigDecimal(8), null));
-		vEcritureComptable.getListLigneEcriture()
-				.add(new LigneEcritureComptable(new CompteComptable(401), "Facture F110001", null, new BigDecimal(51)));
+		 vEcritureComptable.setLibelle("Cartouches d’imprimante");
+
+        vEcritureComptable.getListLigneEcriture().add(new LigneEcritureComptable(new CompteComptable(606),
+                "Cartouches d’imprimante", new BigDecimal(43),
+                null));
+        vEcritureComptable.getListLigneEcriture().add(new LigneEcritureComptable(new CompteComptable(4456),
+                "TVA 20%", new BigDecimal(8),
+                null));
+        vEcritureComptable.getListLigneEcriture().add(new LigneEcritureComptable(new CompteComptable(401),
+                "Facture F110001", null,
+                new BigDecimal(51)));
 
 		managerIntegration.addReference(vEcritureComptable);
 
