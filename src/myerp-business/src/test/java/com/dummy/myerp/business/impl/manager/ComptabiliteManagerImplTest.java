@@ -103,7 +103,8 @@ public class ComptabiliteManagerImplTest extends BusinessTestCase {
 
 	@Test(expected = FunctionalException.class)
 	public void checkEcritureComptableUnitRG5() throws Exception {
-//		SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
+		String anneeReference = sdf.format(vEcritureComptable.getDate());
 		Integer vCurrentYear =  LocalDateTime.ofInstant(new Date().toInstant(), ZoneId.systemDefault()).toLocalDate().getYear();
 		vEcritureComptable.setJournal(new JournalComptable("AC", "Achat"));
 		vEcritureComptable.setDate(new Date());
