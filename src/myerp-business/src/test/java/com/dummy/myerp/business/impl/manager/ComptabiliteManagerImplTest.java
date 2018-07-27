@@ -99,19 +99,18 @@ public class ComptabiliteManagerImplTest extends BusinessTestCase {
 		manager.checkEcritureComptableUnit(vEcritureComptable);
 	}
 
-	@Test
-	public void checkEcritureComptableUnitRG5() throws FunctionalException {
+	@Test(expected = FunctionalException.class)
+	public void checkEcritureComptableUnitRG5() throws Exception {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
 		String vCurrentYear = sdf.format(new Date());
 		vEcritureComptable.setJournal(new JournalComptable("AC", "Achat"));
 		vEcritureComptable.setDate(new Date());
 		vEcritureComptable.setLibelle("Libelle");
-		vEcritureComptable.setReference("VE-" + vCurrentYear + "/00004");
 		vEcritureComptable.getListLigneEcriture()
 				.add(new LigneEcritureComptable(new CompteComptable(1), null, new BigDecimal(123), null));
 		vEcritureComptable.getListLigneEcriture()
 				.add(new LigneEcritureComptable(new CompteComptable(2), null, null, new BigDecimal(123)));
-
+		vEcritureComptable.setReference("AC-" + (vCurrentYear - 1) + "/00001");
 		manager.checkEcritureComptableUnit(vEcritureComptable);
 
 	}
