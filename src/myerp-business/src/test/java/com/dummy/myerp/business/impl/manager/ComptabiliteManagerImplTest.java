@@ -115,6 +115,10 @@ public class ComptabiliteManagerImplTest extends BusinessTestCase {
 				.add(new LigneEcritureComptable(new CompteComptable(2), null, null, new BigDecimal(123)));
 
 		manager.checkEcritureComptableUnit(vEcritureComptable);
+		 vEcritureComptable.setReference("KB-" + vCurrentYear + "/00005");
+		 Assert.assertEquals((vEcritureComptable.getReference().substring(3, 7)), anneeReference);
+		 manager.checkEcritureComptableUnit(vEcritureComptable);
+
 
 	}
 
