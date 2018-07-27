@@ -117,7 +117,7 @@ public class ComptabiliteManagerImplTest extends BusinessTestCase {
 
 		
 		 Assert.assertEquals((vEcritureComptable.getReference().substring(3, 7)), ("2017"));
-		 Assert.assertEquals((vEcritureComptable.getJournal().getCode().substring(0, 2)), ("cC"));
+		 Assert.assertEquals((vEcritureComptable.getJournal().getCode().substring(0, 2)), ("AC"));
 		manager.checkEcritureComptableUnit(vEcritureComptable);
 	
 
