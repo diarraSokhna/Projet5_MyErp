@@ -103,8 +103,8 @@ public class ComptabiliteManagerImplTest extends BusinessTestCase {
 
 	}
 
-	@Test(expected = FunctionalException.class)
-	public void checkEcritureComptableUnitRG5() throws Exception {
+	@Test
+	public void checkEcritureComptableUnitRG5() throws FunctionalException {
 		vEcritureComptable.setJournal(new JournalComptable("AC", "Achat"));
 		vEcritureComptable.setDate(vCurrentDate);
 		vEcritureComptable.setLibelle("Libelle");
@@ -117,7 +117,7 @@ public class ComptabiliteManagerImplTest extends BusinessTestCase {
 		
 		// Assert.assertEquals((vEcritureComptable.getReference().substring(3, 7)), ("2017"));
 	        // Assert.assertEquals((vEcritureComptable.getJournal().getCode().substring(0, 2)), ("AC"));
-		 vEcritureComptable.setReference("CA-" + (vCurrentYear - 1) + "/00001");
+		 vEcritureComptable.setReference("AC-" + (vCurrentYear - 1) + "/00001");
 		 manager.checkEcritureComptableUnit(vEcritureComptable);
 		
 		 vEcritureComptable.setReference("KB-" + vCurrentYear + "/00001");
