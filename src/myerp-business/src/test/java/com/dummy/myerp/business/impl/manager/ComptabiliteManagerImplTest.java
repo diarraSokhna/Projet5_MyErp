@@ -117,10 +117,10 @@ public class ComptabiliteManagerImplTest extends BusinessTestCase {
 		
 		// Assert.assertEquals((vEcritureComptable.getReference().substring(3, 7)), ("2017"));
 	        // Assert.assertEquals((vEcritureComptable.getJournal().getCode().substring(0, 2)), ("AC"));
-		 vEcritureComptable.setReference("AC-" + (vCurrentYear - 1) + "/00001");
+		 vEcritureComptable.setReference("CA-" + (vCurrentYear - 1) + "/00001");
 		 manager.checkEcritureComptableUnit(vEcritureComptable);
 		
-		 vEcritureComptable.setReference("DC-" + vCurrentYear + "/00001");
+		 vEcritureComptable.setReference("KB-" + vCurrentYear + "/00001");
                  manager.checkEcritureComptableUnit(vEcritureComptable);
 	
 
