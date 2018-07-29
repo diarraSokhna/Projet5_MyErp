@@ -103,15 +103,20 @@ public class ComptabiliteManagerImplTest extends BusinessTestCase {
 
 	}
 
-	@Test(expected = FunctionalException.class)
-	public void checkEcritureComptableUnitRG5() throws Exception {
+	@Test
+	public void checkEcritureComptableUnitRG5() throws FunctionalException {
 		vEcritureComptable.setJournal(new JournalComptable("AC", "Achat"));
 		vEcritureComptable.setDate(vCurrentDate);
 		vEcritureComptable.setLibelle("Libelle");
-		vEcritureComptable.getListLigneEcriture()
-				.add(new LigneEcritureComptable(new CompteComptable(1), null, new BigDecimal(123), null));
-		vEcritureComptable.getListLigneEcriture()
-				.add(new LigneEcritureComptable(new CompteComptable(2), null, null, new BigDecimal(123)));
+		vEcritureComptable.getListLigneEcriture().add(new LigneEcritureComptable(new CompteComptable(606),
+                "Cartouches d’imprimante", new BigDecimal(43),
+                null));
+        vEcritureComptable.getListLigneEcriture().add(new LigneEcritureComptable(new CompteComptable(4456),
+                "TVA 20%", new BigDecimal(8),
+                null));
+        vEcritureComptable.getListLigneEcriture().add(new LigneEcritureComptable(new CompteComptable(401),
+                "Facture F110001", null,
+                new BigDecimal(51)));
 
 		
 		
@@ -120,7 +125,6 @@ public class ComptabiliteManagerImplTest extends BusinessTestCase {
 		
 		
 		 vEcritureComptable.setReference("AC-" + (vCurrentYear - 1) + "/00001");
-		 Assert.assertEquals(vEcritureComptable.getJournal().getCode(), vEcritureComptable.getReference().substring(0, 2));
 		 manager.checkEcritureComptableUnit(vEcritureComptable);
 		
 		 vEcritureComptable.setReference("KB-" + vCurrentYear +"/00001");
