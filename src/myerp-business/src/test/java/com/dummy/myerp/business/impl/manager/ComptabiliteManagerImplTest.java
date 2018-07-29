@@ -103,8 +103,8 @@ public class ComptabiliteManagerImplTest extends BusinessTestCase {
 
 	}
 
-	@Test
-	public void checkEcritureComptableUnitRG5() throws FunctionalException {
+	@Test(expected = FunctionalException.class)
+	public void checkEcritureComptableUnitRG5() throws Exception {
 		vEcritureComptable.setJournal(new JournalComptable("AC", "Achat"));
 		vEcritureComptable.setDate(vCurrentDate);
 		vEcritureComptable.setLibelle("Libelle");
