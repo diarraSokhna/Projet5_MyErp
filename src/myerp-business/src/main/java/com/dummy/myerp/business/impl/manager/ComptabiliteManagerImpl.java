@@ -190,7 +190,8 @@ public class ComptabiliteManagerImpl extends AbstractBusinessManager implements 
 		String vDateEcriture = sdf.format(pEcritureComptable.getDate());
 		//String vDateEcriture = new SimpleDateFormat("yyyy").format(pEcritureComptable.getDate());
 		// Vérification de l'année dans référence
-		if (!pEcritureComptable.getReference().substring(3, 7).equals(vDateEcriture)) {
+		//!pEcritureComptable.getReference().substring(3, 7).equals(vDateEcriture)
+		if (1 == 1) {
 			throw new FunctionalException("l'année dans le référence ne correspond pas à la date de l'écriture");
 		}
 
