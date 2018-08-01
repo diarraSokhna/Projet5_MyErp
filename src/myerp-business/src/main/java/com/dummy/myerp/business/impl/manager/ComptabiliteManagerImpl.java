@@ -185,23 +185,25 @@ public class ComptabiliteManagerImpl extends AbstractBusinessManager implements 
 		
 		// vérifier que l'année dans la référence correspond bien à la date de
 		// l'écriture, idem pour le code journal...
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
-		//recupération de l'année d'écriture compta
-		//String vDateEcriture = sdf.format(pEcritureComptable.getDate());
-		String vDateEcriture = "2017";
-		//String vDateEcriture = new SimpleDateFormat("yyyy").format(pEcritureComptable.getDate());
-		// Vérification de l'année dans référence
-		//!pEcritureComptable.getReference().substring(3, 7).equals(vDateEcriture)
-		String annee = "2017";
-		if ("2017" == "2017") {
-			throw new FunctionalException("l'année dans le référence ne correspond pas à la date de l'écriture");
-		}
-
+		
 		// Vérification du code de journal
 		if (!pEcritureComptable.getReference().substring(0, 2).equals(pEcritureComptable.getJournal().getCode())) {
 			throw new FunctionalException("l'année dans le référence ne correspond pas à la date de l'écriture");
 		}
 
+		//SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
+		//recupération de l'année d'écriture compta
+		//String vDateEcriture = sdf.format(pEcritureComptable.getDate());
+		//String vDateEcriture = "2017";
+		String vDateEcriture = new SimpleDateFormat("yyyy").format(pEcritureComptable.getDate());
+		// Vérification de l'année dans référence
+		//!pEcritureComptable.getReference().substring(3, 7).equals(vDateEcriture)
+		//String annee = "2017";
+		if (!(pEcritureComptable.getReference().substring(3, 7)).equals(vDateEcriture)) {
+			throw new FunctionalException("l'année dans le référence ne correspond pas à la date de l'écriture");
+		}
+
+		
 	}
 
 	/**
