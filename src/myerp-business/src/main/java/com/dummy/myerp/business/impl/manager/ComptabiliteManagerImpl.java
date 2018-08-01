@@ -194,7 +194,7 @@ public class ComptabiliteManagerImpl extends AbstractBusinessManager implements 
 		//!pEcritureComptable.getReference().substring(3, 7).equals(vDateEcriture)
 		//String annee = "2017";
 		String anneeDansRef = pEcritureComptable.getReference().substring(3, 7);
-		if (!anneeDansRef.equals(vDateEcriture)) {
+		if (!(anneeDansRef == vDateEcriture)) {
 			throw new FunctionalException("l'année dans le référence ne correspond pas à la date de l'écriture");
 		}
 		
