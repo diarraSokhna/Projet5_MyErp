@@ -187,7 +187,8 @@ public class ComptabiliteManagerImpl extends AbstractBusinessManager implements 
 		// l'écriture, idem pour le code journal...
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
 		//recupération de l'année d'écriture compta
-		String vDateEcriture = sdf.format(pEcritureComptable.getDate());
+		//String vDateEcriture = sdf.format(pEcritureComptable.getDate());
+		String vDateEcriture = new String("2017");
 		//String vDateEcriture = new SimpleDateFormat("yyyy").format(pEcritureComptable.getDate());
 		// Vérification de l'année dans référence
 		//!pEcritureComptable.getReference().substring(3, 7).equals(vDateEcriture)
