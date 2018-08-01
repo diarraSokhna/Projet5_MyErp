@@ -178,8 +178,6 @@ public class ComptabiliteManagerImpl extends AbstractBusinessManager implements 
 		// avec un montant au débit et un montant au crédit ce n'est pas valable
 		if (pEcritureComptable.getListLigneEcriture().size() < 2 || vNbrCredit < 1 || vNbrDebit < 1) {
 			
-			System.out.println(" anneeDansRef = " + anneeDansRef);
-			System.out.println(" anneeDansEcriture = " + vDateEcriture);
 			throw new FunctionalException(
 					"L'écriture comptable doit avoir au moins deux lignes : une ligne au débit et une ligne au crédit.");
 		}
@@ -202,6 +200,8 @@ public class ComptabiliteManagerImpl extends AbstractBusinessManager implements 
 		
 		// Vérification du code de journal
 		if (!pEcritureComptable.getReference().substring(0, 2).equals(pEcritureComptable.getJournal().getCode())) {
+				System.out.println(" anneeDansRef = " + anneeDansRef);
+			System.out.println(" anneeDansEcriture = " + vDateEcriture);
 			throw new FunctionalException("l'année dans le référence ne correspond pas à la date de l'écriture");
 		}
 
