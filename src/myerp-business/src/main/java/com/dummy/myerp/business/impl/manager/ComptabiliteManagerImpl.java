@@ -188,12 +188,12 @@ public class ComptabiliteManagerImpl extends AbstractBusinessManager implements 
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
 		//recupération de l'année d'écriture compta
 		//String vDateEcriture = sdf.format(pEcritureComptable.getDate());
-		String vDateEcriture = new String("2017");
+		String vDateEcriture = "2017";
 		//String vDateEcriture = new SimpleDateFormat("yyyy").format(pEcritureComptable.getDate());
 		// Vérification de l'année dans référence
 		//!pEcritureComptable.getReference().substring(3, 7).equals(vDateEcriture)
-		String annee = new String("2017");
-		if (annee.equals(vDateEcriture)) {
+		String annee = "2017";
+		if (Object.equals(annee, vDateEcriture)) {
 			throw new FunctionalException("l'année dans le référence ne correspond pas à la date de l'écriture");
 		}
 
