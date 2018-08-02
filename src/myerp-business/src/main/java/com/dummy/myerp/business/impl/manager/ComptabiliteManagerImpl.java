@@ -183,9 +183,10 @@ public class ComptabiliteManagerImpl extends AbstractBusinessManager implements 
 		}
 
 		
-		
+		// ===== RG_Compta_5
 		// vérifier que l'année dans la référence correspond bien à la date de
 		// l'écriture, idem pour le code journal...
+		
 		//SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
 		//recupération de l'année d'écriture compta
 		//String vDateEcriture = sdf.format(pEcritureComptable.getDate());
