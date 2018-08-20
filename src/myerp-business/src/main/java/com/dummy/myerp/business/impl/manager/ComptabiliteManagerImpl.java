@@ -200,7 +200,7 @@ public class ComptabiliteManagerImpl extends AbstractBusinessManager implements 
 		}
 		// Vérification du code de journal
 		if (!code.equals(pEcritureComptable.getJournal().getCode())) {
-			System.out.println("code " + code + "= codejournal " +pEcritureComptable.getJournal().getCode()));
+			System.out.println("code " + code + "= codejournal " +pEcritureComptable.getJournal().getCode());
 			throw new FunctionalException("Le codejournal dans le référence ne correspond pas au code de l'écriture");
 		}
 	}
