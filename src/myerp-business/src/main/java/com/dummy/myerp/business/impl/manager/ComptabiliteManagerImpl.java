@@ -193,17 +193,13 @@ public class ComptabiliteManagerImpl extends AbstractBusinessManager implements 
 		//String vDateEcriture = "2017";
 		String vDateEcriture = new SimpleDateFormat("yyyy").format(pEcritureComptable.getDate());
 		// Vérification de l'année dans référence
-		//!pEcritureComptable.getReference().substring(3, 7).equals(vDateEcriture)
-		//String anneeDansRef = pEcritureComptable.getReference().substring(3, 7);
-		if (!pEcritureComptable.getReference().substring(3, 7).equals(vDateEcriture)) {
+		String anneeDansRef = pEcritureComptable.getReference().substring(3, 7);
+		if (!anneeDansRef.equals(vDateEcriture)) {
 			throw new FunctionalException("l'année dans le référence ne correspond pas à la date de l'écriture");
 		}
-		
 		// Vérification du code de journal
 		if (!pEcritureComptable.getReference().substring(0, 2).equals(pEcritureComptable.getJournal().getCode())) {
-			//System.out.println(" anneeDansRef = " + anneeDansRef);
-			//System.out.println(" anneeDansEcriture = " + vDateEcriture);
-			throw new FunctionalException("l'année dans le référence ne correspond pas à la date de l'écriture");
+			throw new FunctionalException("Le codejournal dans le référence ne correspond pas au code de l'écriture");
 		}
 	}
 
