@@ -116,12 +116,7 @@ public class ComptabiliteManagerImplTest extends BusinessTestCase {
                 new BigDecimal(123)));
 
 		
-		
-		// Assert.assertEquals((vEcritureComptable.getReference().substring(3, 7)), ("2017"));
-	        // Assert.assertEquals((vEcritureComptable.getJournal().getCode().substring(0, 2)), ("AC"));
-		
-		
-		 vEcritureComptable.setReference("AC-2017/00001");
+		 vEcritureComptable.setReference("AC-" +( vCurrentYear - 1) +"/00001");
 		 manager.checkEcritureComptableUnit(vEcritureComptable);
 		
 		 vEcritureComptable.setReference("KB-" + vCurrentYear +"/00001");
@@ -185,7 +180,7 @@ public class ComptabiliteManagerImplTest extends BusinessTestCase {
 		manager.checkEcritureComptableContext(vEcritureComptable);
 	}
 
-	@Test
+	@Test(expected = FunctionalException.class)
 	public void checkEcritureComptableContextRG6() throws Exception {
 		 vEcritureComptable.setReference("VE-2016/00002");
                   manager.checkEcritureComptableContext(vEcritureComptable);
