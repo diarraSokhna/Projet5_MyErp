@@ -195,12 +195,13 @@ public class ComptabiliteManagerImpl extends AbstractBusinessManager implements 
 		// Vérification de l'année dans référence
 		String anneeDansRef = pEcritureComptable.getReference().substring(3, 7);
 		String code = pEcritureComptable.getReference().substring(0, 2);
+		String codeJournal = pEcritureComptable.getJournal().getCode());
 		if (!anneeDansRef.equals(vDateEcriture)) {
 			throw new FunctionalException("l'année dans le référence ne correspond pas à la date de l'écriture");
 		}
 		// Vérification du code de journal
-		if (!code.equals(pEcritureComptable.getJournal().getCode())) {
-			System.out.println("code " + code + "= codejournal " +pEcritureComptable.getJournal().getCode());
+		if (!code.equals(codeJournal) {
+			//System.out.println("code " + code + "= codejournal " +pEcritureComptable.getJournal().getCode());
 			throw new FunctionalException("Le codejournal dans le référence ne correspond pas au code de l'écriture");
 		}
 	}
