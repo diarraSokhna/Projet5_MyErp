@@ -57,7 +57,7 @@ public class ComptabiliteManagerImplTest extends BusinessTestCase {
 
 	}
 
-	@Test(expected = FunctionalException.class)
+	@Test
 	public void checkEcritureComptableUnit() throws Exception {
 		Date vCurrentDate = new Date();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
@@ -159,7 +159,7 @@ public class ComptabiliteManagerImplTest extends BusinessTestCase {
 
 	}
 
-	@Test(expected = FunctionalException.class)
+	@Test
 	public void checkEcritureComptable() throws Exception {
 		EcritureComptable vEcritureComptable;
 		vEcritureComptable = new EcritureComptable();
