@@ -116,7 +116,7 @@ public class ComptabiliteManagerImplTest extends BusinessTestCase {
                 new BigDecimal(123)));
 
 		
-		 vEcritureComptable.setReference("AC-" +( vCurrentYear - 1) +"/00001");
+		 vEcritureComptable.setReference("DC-" +( vCurrentYear - 1) +"/00001");
 		 manager.checkEcritureComptableUnit(vEcritureComptable);
 		
 		 vEcritureComptable.setReference("DC-" + vCurrentYear +"/00001");
